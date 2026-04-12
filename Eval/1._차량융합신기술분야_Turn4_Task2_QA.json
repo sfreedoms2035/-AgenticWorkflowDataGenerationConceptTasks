@@ -1,0 +1,62 @@
+{
+  "report_id": "QA-AUTO",
+  "evaluated_file": "1._\ucc28\ub7c9\uc735\ud569\uc2e0\uae30\uc220\ubd84\uc57c_Turn4_Task2.json",
+  "overall_status": "FAIL",
+  "locally_fixable": [
+    {
+      "category": "followup_quality",
+      "issue": "Turn 2: duplicated [No Thinking] prefix (2 occurrences)"
+    },
+    {
+      "category": "followup_quality",
+      "issue": "Turn 4: duplicated [No Thinking] prefix (2 occurrences)"
+    }
+  ],
+  "needs_regeneration": [],
+  "needs_partial_repair": [],
+  "metrics": {
+    "json_structure": {
+      "status": "PASS",
+      "violations": []
+    },
+    "conversation_completeness": {
+      "status": "PASS",
+      "violations": []
+    },
+    "richness_and_complexity": {
+      "status": "PASS",
+      "violations": []
+    },
+    "structured_answer_format": {
+      "status": "PASS",
+      "violations": []
+    },
+    "cot_structure": {
+      "status": "PASS",
+      "violations": []
+    },
+    "self_containment": {
+      "status": "PASS",
+      "violations": []
+    },
+    "followup_quality": {
+      "status": "FAIL",
+      "violations": [
+        "Turn 2: duplicated [No Thinking] prefix (2 occurrences)",
+        "Turn 4: duplicated [No Thinking] prefix (2 occurrences)"
+      ]
+    },
+    "thinking_quality": {
+      "status": "PASS",
+      "violations": []
+    }
+  },
+  "stats": {
+    "cot_chars": 19502,
+    "answer_chars": 44217,
+    "corpus_lines": 39,
+    "graph_elements": 41,
+    "axiomatic_lines": 38,
+    "turns": 6
+  }
+}

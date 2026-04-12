@@ -1,0 +1,63 @@
+{
+  "report_id": "QA-AUTO",
+  "evaluated_file": "10.1111-risa.13267_Turn3_Task1.json",
+  "overall_status": "FAIL",
+  "locally_fixable": [],
+  "needs_regeneration": [
+    {
+      "category": "richness_and_complexity",
+      "issue": "CoT too short: 3859 chars (min 9000)"
+    },
+    {
+      "category": "structured_answer_format",
+      "issue": "Axiomatic base too short: ~10 lines (min 15)"
+    }
+  ],
+  "needs_partial_repair": [],
+  "metrics": {
+    "json_structure": {
+      "status": "PASS",
+      "violations": []
+    },
+    "conversation_completeness": {
+      "status": "PASS",
+      "violations": []
+    },
+    "richness_and_complexity": {
+      "status": "FAIL",
+      "violations": [
+        "CoT too short: 3859 chars (min 9000)"
+      ]
+    },
+    "structured_answer_format": {
+      "status": "FAIL",
+      "violations": [
+        "Axiomatic base too short: ~10 lines (min 15)"
+      ]
+    },
+    "cot_structure": {
+      "status": "PASS",
+      "violations": []
+    },
+    "self_containment": {
+      "status": "PASS",
+      "violations": []
+    },
+    "followup_quality": {
+      "status": "PASS",
+      "violations": []
+    },
+    "thinking_quality": {
+      "status": "PASS",
+      "violations": []
+    }
+  },
+  "stats": {
+    "cot_chars": 3859,
+    "answer_chars": 17377,
+    "corpus_lines": 15,
+    "graph_elements": 57,
+    "axiomatic_lines": 10,
+    "turns": 6
+  }
+}

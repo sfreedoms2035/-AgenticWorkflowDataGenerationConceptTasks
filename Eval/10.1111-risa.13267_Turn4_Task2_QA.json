@@ -1,0 +1,68 @@
+{
+  "report_id": "QA-AUTO",
+  "evaluated_file": "10.1111-risa.13267_Turn4_Task2.json",
+  "overall_status": "FAIL",
+  "locally_fixable": [],
+  "needs_regeneration": [
+    {
+      "category": "richness_and_complexity",
+      "issue": "CoT too short: 1043 chars (min 9000)"
+    },
+    {
+      "category": "cot_structure",
+      "issue": "Missing CoT parent headers: 1., 2., 3., 4., 5., 6., 7., 8."
+    },
+    {
+      "category": "cot_structure",
+      "issue": "Missing 31 CoT sub-elements: 1.1, 1.2, 2.1, 2.2, 2.3..."
+    }
+  ],
+  "needs_partial_repair": [],
+  "metrics": {
+    "json_structure": {
+      "status": "PASS",
+      "violations": []
+    },
+    "conversation_completeness": {
+      "status": "PASS",
+      "violations": []
+    },
+    "richness_and_complexity": {
+      "status": "FAIL",
+      "violations": [
+        "CoT too short: 1043 chars (min 9000)"
+      ]
+    },
+    "structured_answer_format": {
+      "status": "PASS",
+      "violations": []
+    },
+    "cot_structure": {
+      "status": "FAIL",
+      "violations": [
+        "Missing CoT parent headers: 1., 2., 3., 4., 5., 6., 7., 8.",
+        "Missing 31 CoT sub-elements: 1.1, 1.2, 2.1, 2.2, 2.3..."
+      ]
+    },
+    "self_containment": {
+      "status": "PASS",
+      "violations": []
+    },
+    "followup_quality": {
+      "status": "PASS",
+      "violations": []
+    },
+    "thinking_quality": {
+      "status": "PASS",
+      "violations": []
+    }
+  },
+  "stats": {
+    "cot_chars": 1043,
+    "answer_chars": 31047,
+    "corpus_lines": 21,
+    "graph_elements": 27,
+    "axiomatic_lines": 25,
+    "turns": 6
+  }
+}

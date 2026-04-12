@@ -1,0 +1,52 @@
+# VARIATION SCHEMA: 10-ELEMENT CONCEPTS (16 Tasks per Mode)
+*Instruction: Identify if the source document is Technical or Regulatory. Dynamically extract the core knowledge from the text and extrapolate it into massive, academic 10-element conceptual frameworks based on the Meta-Strategies. Must include First Order Logic/SMT-LIB and XML SysML.*
+
+## MODE A: TECHNICAL DOCUMENTS
+- **TURN 1:**
+  - **Task 1** | Role: Chief Scientist | Diff: 98 | Meta-Strategy: **Theoretical Background.** 
+  - **Task 2** | Role: Systems Architect | Diff: 92 | Meta-Strategy: **Critique of the Approach.** 
+- **TURN 2:**
+  - **Task 3** | Role: Safety Auditor | Diff: 96 | Meta-Strategy: **Benchmarking.** 
+  - **Task 4** | Role: ML Researcher | Diff: 90 | Meta-Strategy: **Further Improvement.** 
+- **TURN 3:**
+  - **Task 5** | Role: Project Manager | Diff: 85 | Meta-Strategy: **Practical Usage.**
+  - **Task 6** | Role: Concept Engineer | Diff: 95 | Meta-Strategy: **Reverse Engineering.** 
+- **TURN 4:**
+  - **Task 7** | Role: Hardware Eng | Diff: 84 | Meta-Strategy: **Edge-Case Stressing.** 
+  - **Task 8** | Role: SOTIF Lead | Diff: 91 | Meta-Strategy: **Integration & Scaling.** 
+- **TURN 5:**
+  - **Task 9** | Role: Control Theory Eng | Diff: 88 | Meta-Strategy: **Theoretical Background.** 
+  - **Task 10**| Role: Test Manager | Diff: 93 | Meta-Strategy: **Critique of the Approach.** 
+- **TURN 6:**
+  - **Task 11**| Role: Network Architect | Diff: 89 | Meta-Strategy: **Benchmarking.** 
+  - **Task 12**| Role: Perception Lead | Diff: 94 | Meta-Strategy: **Further Improvement.**
+- **TURN 7:**
+  - **Task 13**| Role: Reliability Eng | Diff: 97 | Meta-Strategy: **Practical Usage.** 
+  - **Task 14**| Role: Cybersecurity Eng | Diff: 86 | Meta-Strategy: **Reverse Engineering.** 
+- **TURN 8:**
+  - **Task 15**| Role: Simulation Lead | Diff: 82 | Meta-Strategy: **Edge-Case Stressing.** 
+  - **Task 16**| Role: Integration Arch | Diff: 99 | Meta-Strategy: **Integration & Scaling.** 
+## MODE B: REGULATION & STANDARDS DOCUMENTS
+- **TURN 1:**
+  - **Task 1** | Role: Regulation Eng | Diff: 97 | Meta-Strategy: **Constraint Formalization.** 
+  - **Task 2** | Role: Legal Counsel | Diff: 94 | Meta-Strategy: **Liability Mapping.** 
+- **TURN 2:**
+  - **Task 3** | Role: Safety Auditor | Diff: 96 | Meta-Strategy: **Compliance Validation.** 
+  - **Task 4** | Role: SOTIF Lead | Diff: 92 | Meta-Strategy: **Gap Analysis.** 
+  - **Task 5** | Role: Compliance Dir | Diff: 89 | Meta-Strategy: **Policy Enforcement.** 
+  - **Task 6** | Role: Regulatory Arch | Diff: 95 | Meta-Strategy: **Traceability Mapping.** 
+- **TURN 4:**
+  - **Task 7** | Role: Ethics Committee | Diff: 98 | Meta-Strategy: **Ambiguity Resolution.** 
+  - **Task 8** | Role: Legal Concept Eng | Diff: 90 | Meta-Strategy: **Artifact Compliance Audit.** 
+- **TURN 5:**
+  - **Task 9** | Role: Homologation Lead| Diff: 93 | Meta-Strategy: **Benchmarking.** 
+  - **Task 10**| Role: Forensic Analyst | Diff: 85 | Meta-Strategy: **Reverse Engineering.** 
+- **TURN 6:**
+  - **Task 11**| Role: Functional Safety| Diff: 88 | Meta-Strategy: **Constraint Formalization.** 
+  - **Task 12**| Role: Legal Researcher | Diff: 91 | Meta-Strategy: **Cross-Jurisdictional Harmonization.** 
+- **TURN 7:**
+  - **Task 13**| Role: Test Manager | Diff: 86 | Meta-Strategy: **Compliance Validation.** 
+  - **Task 14**| Role: Systems Architect| Diff: 97 | Meta-Strategy: **Liability Mapping.** 
+- **TURN 8:**
+  - **Task 15**| Role: Privacy Officer | Diff: 84 | Meta-Strategy: **Policy Enforcement.**
+  - **Task 16**| Role: Compliance Arch | Diff: 99 | Meta-Strategy: **Regulatory Loophole.**

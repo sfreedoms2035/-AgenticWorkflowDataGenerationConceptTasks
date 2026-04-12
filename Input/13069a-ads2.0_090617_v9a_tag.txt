@@ -1,0 +1,1266 @@
+  AUTOMATED DRIVING SYSTEMS 2.0
+        A Vision for Safety pall —
+“>: | X x =
+
+
+   - a  > J    =
+Fa      —
+
+vA    I'S  iB
+— re |
+
+   INTRODUCTORY MESSAGE
+
+
+
+
+Today, our country is on the verge of one of the most exciting and important innovations in transportation history—
+the development of Automated Driving Systems (ADSs), commonly referred to as automated or self-driving vehicles.
+
+The future of this new technology is so full of promise. It’s a future where vehicles increasingly help drivers avoid
+crashes. It’s a future where the time spent commuting is dramatically reduced, and where millions more—including
+the elderly and people with disabilities–gain access to the freedom of the open road. And, especially important, it’s a TAK\
+future where highway fatalities and injuries are significantly reduced. =
+
+Since the Department of Transportation was established in 1966, there have been more than 2.2 million motor- \
+vehicle-related fatalities in the United States. In addition, after decades of decline, motor vehicle fatalities spiked by A
+more than 7.2 percent in 2015, the largest single-year increase since 1966. The major factor in 94 percent of all fatal
+crashes is human error. So ADSs have the potential to significantly reduce highway fatalities by addressing the root
+cause of these tragic crashes.
+
+The U.S. Department of Transportation has a role to play in building and shaping this future by developing a
+regulatory framework that encourages, rather than hampers, the safe development, testing and deployment of
+automated vehicle technology. Secretary Elaine L. Chao
+        U.S. Department of Transportation
+Accordingly, the Department is releasing A Vision for Safety to promote improvements in safety, mobility, and
+efficiency through ADSs.
+
+A Vision for Safety replaces the Federal Automated Vehicle Policy released in 2016. This updated policy framework offers a path
+forward for the safe deployment of automated vehicles by:
+      • Encouraging new entrants and ideas that deliver safer vehicles;
+      • Making Department regulatory processes more nimble to help match the pace of private sector innovation; and
+      • Supporting industry innovation and encouraging open communication with the public and with stakeholders.
+
+Thanks to a convergence of technological advances, the promise of safer automated driving systems is closer to becoming a reality.
+From reducing crash-related deaths and injuries, to improving access to transportation, to reducing traffic congestion and vehicle
+emissions, automated vehicles hold significant potential to increase productivity and improve the quality of life for millions of people.
+A Vision for Safety seeks to facilitate the integration of ADS technology by helping to ensure its safe testing and deployment, as well
+as encouraging the development of systems that guard against cyber-attacks and protect consumer privacy.
+
+Our goal at the Department of Transportation is to be good stewards of the future by helping to usher in this new era of
+transportation innovation and safety, and ensuring that our country remains a global leader in autonomous vehicle technology.
+
+
+
+    AUTOMATED DRIVING SYSTEMS 2.0: A VISION FOR SAFETY    i
+
+   EXECUTIVE SUMMARY
+
+
+
+
+The world is facing an unprecedented emergence of automation Given the developing state of the technology, this Voluntary Guidance
+technologies. In the transportation sector, where 9 out of 10 serious provides a flexible framework for industry to use in choosing how to
+roadway crashes occur due to human behavior, automated vehicle address a given safety design element. In addition, to help support
+technologies possess the potential to save thousands of lives, as well public trust and confidence, the Voluntary Guidance encourages entities
+as reduce congestion, enhance mobility, and improve productivity. engaged in testing and deployment to publicly disclose Voluntary Safety
+The Federal Government wants to ensure it does not impede progress Self-Assessments of their systems in order to demonstrate their varied
+with unnecessary or unintended barriers to innovation. Safety remains approaches to achieving safety.
+the number one priority for the U.S. Department of Transportation Vehicles operating on public roads are subject to both Federal and State
+(DOT) and is the specific focus of the National Highway Traffic Safety jurisdiction, and States are beginning to draft legislation to safely deploy
+Administration (NHTSA). emerging ADSs. To support the State work, NHTSA offers Section 2:
+NHTSA’s mission is to save lives, prevent injuries, and reduce the Technical Assistance to States, Best Practices for Legislatures Regarding
+economic costs of roadway crashes through education, research, safety Automated Driving Systems (Best Practices). The section clarifies and
+standards, and enforcement activity. As automated vehicle technologies delineates Federal and State roles in the regulation of ADSs. NHTSA
+advance, they have the potential to dramatically reduce the loss of life remains responsible for regulating the safety design and performance
+each day in roadway crashes. To support industry innovators and States aspects of motor vehicles and motor vehicle equipment; States continue
+in the deployment of this technology, while informing and educating the to be responsible for regulating the human driver and vehicle operations.
+public, and improving roadway safety through the safe introduction of The section also provides Best Practices for Legislatures, which
+the technology, NHTSA presents Automated Driving Systems: A Vision for incorporates common safety-related components and significant
+Safety. It is an important part of DOT’s multimodal efforts to support the elements regarding ADSs that States should consider incorporating
+safe introduction of automation technologies. in legislation. In addition, the section provides Best Practices for State
+In this document, NHTSA offers a nonregulatory approach to automated Highway Safety Officials, which offers a framework for States to develop
+vehicle technology safety. Section 1: Voluntary Guidance for Automated procedures and conditions for ADSs’ safe operation on public roadways.
+Driving Systems (Voluntary Guidance) supports the automotive industry It includes considerations in such areas as applications and permissions
+and other key stakeholders as they consider and design best practices to test, registration and titling, working with public safety officials, and
+for the testing and safe deployment of Automated Driving Systems liability and insurance.
+(ADSs - SAE Automation Levels 3 through 5 – Conditional, High, and Full Together, the Voluntary Guidance and Best Practices sections serve to
+Automation Systems). It contains 12 priority safety design elements for support industry, Government officials, safety advocates, and the public.
+consideration, including vehicle cybersecurity, human machine interface, As our Nation and the world embrace technological advances in motor
+crashworthiness, consumer education and training, and post-crash ADS vehicle transportation through ADSs, safety must remain the top priority.
+behavior.
+
+
+
+
+    ii    AUTOMATED DRIVING SYSTEMS 2.0: A VISION FOR SAFETY
+
+Over the coming months and years, NHTSA, along with other Federal agencies, where relevant, will continue to take a leadership
+role in encouraging the safe introduction of automated vehicle technologies into the motor vehicle fleet and on public roadways in
+the areas of policy, research, safety standards, freight and commercial use, infrastructure, and mass transit.
+
+The Office of the Under Secretary for Policy (OST-P) is the office The Federal Motor Carrier Safety Administration (FMCSA) is the lead
+responsible for serving as a principal advisor to the Secretary and Federal Government agency responsible for regulating and providing
+provides leadership in the development of policies for the Department, operational safety oversight (for instance, hours of service regulations,
+generating proposals and providing advice regarding legislative and drug and alcohol testing, hazardous materials safety, vehicle inspections)
+regulatory initiatives across all modes of transportation. The Under for motor carriers operating commercial motor vehicles (CMVs), such
+Secretary coordinates the Department’s budget development and policy as trucks and buses, and CMV drivers. FMCSA partners with industry,
+development functions. The Under Secretary also directs transportation safety advocates, and State and local governments to keep our Nation’s
+policy development and works to ensure that the Nation’s transportation roadways safe and improve CMV safety through financial assistance,
+resources function as an integrated national system.  regulation, education, enforcement, research, and technology.
+See www.transportation.gov/policy. See www.fmcsa.dot.gov.
+
+
+    The Office of the Assistant Secretary for Research and Technology           The Federal Highway Administration (FHWA) supports State and local
+    (OST-R) is the lead office responsible for coordinating DOT’s research      governments in the design, construction, and maintenance of the
+    and for sharing advanced technologies with the transportation system.       Nation’s highway system (Federal Aid Highway Program) and various
+    Technical and policy research on these technologies occurs through the      Federal and tribal lands (Federal Lands Highway Program). Through
+    Intelligent Transportation Systems (ITS) Research Program, the University   financial and technical assistance to State and local governments, FHWA
+    Transportation Centers, and the Volpe National Transportation Research      is responsible for ensuring that America’s roads and highways continue
+    Center, which make investments in technology initiatives, exploratory       to be among the safest and most technologically sound in the world.
+    studies, pilot deployment programs and evaluations in intelligent           See www.fhwa.dot.gov.
+    vehicles, infrastructure, and multi-modal systems.
+    See www.its.dot.gov and www.transportation.gov/research-technology.
+                                                                                The Federal Transit Administration (FTA) provides financial and technical
+                                                                                assistance to local public transit systems, including buses, subways,
+                                                                                light rail, commuter rail, trolleys, and ferries. FTA also oversees safety
+                                                                                measures and helps develop next-generation technology research.
+                                                                                See www.transit.dot.gov.
+
+
+
+    AUTOMATED DRIVING SYSTEMS 2.0: A VISION FOR SAFETY                          iii
+
+   TABLE OF CONTENTS
+
+
+
+
+
+
+    Section 1: Voluntary    Guidance        Section 2: Technical      Assistance to States
+
+Overview .............................................................................................................1  Overview ..........................................................................................................19
+
+          Scope and Purpose ......................................................................................... 2                        Federal and State Regulatory Roles ..........................................................20
+
+           ADS Safety Elements .......................................................................................5                 Best Practices for Legislatures ....................................................................21
+
+      System Safety.................................................................................................. 5                                 Best Practices for State Highway Safety Officials ..................................22
+
+                     Operational Design Domain ...................................................................... 6      Conclusion ....................................................................................................25
+
+                                  Object and Event Detection and Response ............................................7    Endnotes ........................................................................................................26
+
+                       Fallback (Minimal Risk Condition) .............................................................8
+
+            Validation Methods .......................................................................................9
+
+                     Human Machine Interface ........................................................................10
+
+             Vehicle Cybersecurity ..................................................................................11
+
+           Crashworthiness ..........................................................................................12
+
+                   Post-Crash ADS Behavior ..........................................................................13
+
+          Data Recording ............................................................................................14
+
+                           Consumer Education and Training ......................................................... 15
+
+                     Federal, State, and Local Laws .................................................................15
+
+    Voluntary Safety Self-Assessment  ............................................................16
+
+
+
+
+
+
+
+
+
+
+    iv    AUTOMATED DRIVING SYSTEMS 2.0: A VISION FOR SAFETY
+
+SECTION 1:
+ VOLUNTARY GUIDANCE
+     For Automated Driving Systems
+
+
+ OVERVIEW
+
+ The U.S. Department of Transportation (DOT) through the National             In addition, to help support public trust and confidence in the safety of
+ Highway Traffic Safety Administration (NHTSA) is fully committed to          ADSs, this Voluntary Guidance encourages entities to disclose Voluntary
+ reaching an era of crash-free roadways through deployment of innovative      Safety Self-Assessments demonstrating their varied approaches to
+ lifesaving technologies. Recent negative trends in automotive crashes        achieving safety in the testing and deployment of ADSs.²
+ underscore the urgency to develop and deploy lifesaving technologies         Entities are encouraged to begin using this Voluntary Guidance on the
+ that can dramatically decrease the number of fatalities and injuries on      date of its publication. NHTSA plans to regularly update the Voluntary
+ our Nation’s roadways. NHTSA believes that Automated Driving Systems         Guidance to reflect lessons learned, new data, and stakeholder input as
+ (ADSs), including those contemplating no driver at all, have the potential   technology continues to be developed and refined.
+ to significantly improve roadway safety in the United States.
+ The purpose of this Voluntary Guidance is to support the automotive          For overall awareness and to ensure consistency in taxonomy usage,
+ industry, the States, and other key stakeholders as they consider and        NHTSA adopted SAE International’s Levels of Automation and other
+ design best practices relative to the testing and deployment of automated    applicable terminology.³
+ vehicle technologies. It updates the Federal Automated Vehicles Policy
+ released in September 2016 and serves as NHTSA’s current operating
+ guidance for ADSs.
+ The Voluntary Guidance contains 12 priority safety design elements.¹                      NHTSA’S MISSION
+ These elements were selected based on research conducted by the
+ Transportation Research Board (TRB), universities, and NHTSA. Each
+ element contains safety goals and approaches that could be used to           Save lives, prevent injuries, and reduce
+ achieve those safety goals. Entities are encouraged to consider each
+ safety element in the design of their systems and have a self-documented        economic costs due to road traffic
+ process for assessment, testing, and validation of the various elements. As
+ automated driving technologies evolve at a rapid pace, no single standard      crashes, through education, research,
+ exists by which an entity’s methods of considering a safety design
+ element can be measured. Each entity is free to be creative and innovative    safety standards, and enforcement activity.
+ when developing the best method for its system to appropriately mitigate
+ the safety risks associated with their approach.
+
+
+
+
+ AUTOMATED DRIVING SYSTEMS 2.0: A VISION FOR SAFETY                           1
+
+    SECTION 1: VOLUNTARY GUIDANCE
+
+
+SCOPE AND PURPOSE
+
+Through this Voluntary Guidance, NHTSA is supporting entities that This Voluntary Guidance focuses on vehicles that incorporate SAE
+are designing ADSs for use on public roadways in the United States. Automation Levels 3 through 5 – Automated Driving Systems (ADSs).
+This includes traditional vehicle manufacturers as well as other entities ADSs may include systems for which there is no human driver or for
+involved with manufacturing, designing, supplying, testing, selling, which the human driver can give control to the ADS and would not be
+operating, or deploying ADSs, including equipment designers and expected to perform any driving-related tasks for a period of time.⁵ It
+suppliers; entities that outfit any vehicle with automated capabilities or is an entity’s responsibility to determine its system’s automation level in
+equipment for testing, for commercial sale, and/or for use on public conformity with SAE International’s published definitions.
+roadways; transit companies; automated fleet operators; “driverless” taxi The purpose of this Voluntary Guidance is to help designers of ADSs
+companies; and any other individual or entity that offers services utilizing analyze, identify, and resolve safety considerations prior to deployment
+ADS technology (referred to collectively as “entities” or “industry”). using their own, industry, and other best practices. It outlines 12 safety
+This Voluntary Guidance applies to the design aspects of motor vehicles elements, which the Agency believes represent the consensus across
+and motor vehicle equipment under NHTSA’s jurisdiction, including low- the industry, that are generally considered to be the most salient design
+speed vehicles, motorcycles, passenger vehicles, medium-duty vehicles, aspects to consider and address when developing, testing, and deploying
+and heavy-duty CMVs such as large trucks and buses. These entities are ADSs on public roadways. Within each safety design element, entities are
+subject to NHTSA’s defect, recall, and enforcement authority.⁴ For entities encouraged to consider and document their use of industry standards,
+seeking to request regulatory action (e.g., petition for exemption or best practices, company policies, or other methods they have employed
+interpretation) from NHTSA, an informational resource is available on the to provide for increased system safety in real-world conditions. The
+Agency’s website at www.nhtsa.gov/technology-innovation/automated- 12 safety design elements apply to both ADS original equipment and
+vehicles, along with other associated references and resources. to replacement equipment or updates (including software updates/
+Interstate motor carrier operations and CMV drivers fall under the upgrades) to ADSs.
+jurisdiction of FMCSA and are not within the scope of this Voluntary This Voluntary Guidance provides recommendations and suggestions
+Guidance. Currently, per the Federal Motor Carrier Safety Regulations for industry’s consideration and discussion. This Guidance is entirely
+(FMCSRs), a trained commercial driver must be behind the wheel at all voluntary, with no compliance requirement or enforcement mechanism.
+times, regardless of any automated driving technologies available on The sole purpose of this Guidance is to support the industry as it
+the CMV, unless a petition for a waiver or exemption has been granted. develops best practices in the design, development, testing, and
+For more information regarding CMV operations and automated driving deployment of automated vehicle technologies.
+technologies, including guidance on FMCSA’s petition process, see
+www.fmcsa.dot.gov.
+
+
+
+
+
+
+
+
+    2    AUTOMATED DRIVING SYSTEMS 2.0: A VISION FOR SAFETY
+
+NHTSA’S ENFORCEMENT AUTHORITY
+
+
+Several States have sought clarification of NHTSA’s enforcement authority with
+respect to ADSs. As DOT is asking States to maintain the delineation of Federal
+and State regulatory authority, NHTSA understands that States are looking for
+reassurance that the Federal Government has tools to keep their roadways safe.
+NHTSA has broad enforcement authority to address existing and new
+automotive technologies and equipment. The Agency is commanded by
+Congress⁶ to protect the safety of the driving public against unreasonable risks
+of harm that may arise because of the design, construction, or performance
+of a motor vehicle or motor vehicle equipment, and to mitigate risks of harm,
+including risks that may arise in connection with ADSs. Specifically, NHTSA’s
+enforcement authority concerning safety-related defects in motor vehicles
+and motor vehicle equipment extends and applies equally to current and
+emerging ADSs. As NHTSA has always done, when evaluating new automotive
+technologies, it will be guided by its statutory mission, the laws it is obligated to
+enforce, and the benefits of the technology.
+
+
+
+
+
+
+
+
+
+
+AUTOMATED DRIVING SYSTEMS 2.0: A VISION FOR SAFETY    3
+
+    SECTION 1: VOLUNTARY GUIDANCE
+
+
+
+SAE AUTOMATION LEVELS
+SAE AUTOMATION LEVELS
+
+    Full Automation
+
+
+
+
+
+
+
+
+
+
+    0                            1                      2                      3                       4                       5
+       No       Driver   Partial                      Conditional                                     High        Full
+    Automation               Assistance  Automation   Automation                                   Automation              Automation
+
+ Zero autonomy;        Vehicle is controlled  Vehicle has combined  Driver is a necessity,  The vehicle is capable  The vehicle is capable
+    the driver performs by the driver, but    automated functions,    but is not required      of performing all       of performing all
+all driving tasks.      some driving assist   like acceleration and     to monitor the         driving functions       driving functions
+                          features may be   steering, but the driver     environment.            under certain       under all conditions.
+                          included in the      must remain engaged    The driver must be    conditions. The driver The driver may
+                          vehicle design.     with the driving task  ready to take control    may have the option     have the option to
+                                                 and monitor the     of the vehicle at all to control the vehicle.    control the vehicle.
+                                                 environment at  times with notice.
+                         all times.
+
+
+
+
+
+
+
+
+
+
+    4    AUTOMATED DRIVING SYSTEMS 2.0: A VISION FOR SAFETY
+
+ADS SAFETY ELEMENTS
+
+1.  System Safety
+    Entities are encouraged to follow a robust design and validation          and safety assessment of artificial intelligence and other relevant
+    process based on a systems-engineering approach with the goal of          software technologies and algorithms to improve the effectiveness
+    designing ADSs free of unreasonable safety risks. The overall process     and safety of ADSs.
+    should adopt and follow industry standards, such as the functional        Design decisions should be linked to the assessed risks that
+    safety⁷ process standard for road vehicles, and collectively cover the    could impact safety-critical system functionality. Design safety
+    entire operational design domain (i.e., operating parameters and          considerations should include design architecture, sensors,
+    limitations) of the system. Entities are encouraged to adopt voluntary    actuators, communication failure, potential software errors, reliability,
+    guidance, best practices, design principles, and standards developed      potential inadequate control, undesirable control actions, potential
+    by established and accredited standards-developing organizations          collisions with environmental objects and other road users, potential
+    (as applicable) such as the International Standards Organization (ISO)    collisions that could be caused by actions of an ADS, leaving the
+    and SAE International, as well as standards and processes available       roadway, loss of traction or stability, and violation of traffic laws and
+    from other industries such as aviation, space, and the military⁸ and      deviations from normal (expected) driving practices.
+    other applicable standards or internal company processes as they are
+    relevant and applicable. See NHTSA’s June 2016 report, Assessment         All design decisions should be tested, validated, and verified as
+    of Safety Standards for Automotive Electronic Control Systems⁹,           individual subsystems and as part of the entire vehicle architecture.
+    which provides an evaluation of the strengths and limitations of          Entities are encouraged to document the entire process; all actions,
+    such standards.                                                           changes, design choices, analyses, associated testing, and data
+                                                                              should be traceable and transparent.
+    The design and validation process should also consider including
+    a hazard analysis and safety risk assessment for ADSs, for the
+    overall vehicle design into which it is being integrated, and when
+    applicable, for the broader transportation ecosystem. Additionally,                  2
+    the process shall describe design redundancies and safety strategies          . \        )
+    for handling ADS malfunctions. Ideally, the process should place          "              &—
+    significant emphasis on software development, verification, and                      |
+    validation. The software development process is one that should
+    be well-planned, well-controlled, and well-documented to detect          —            =      |     —     —
+    and correct unexpected results from software updates. Thorough                           -
+                                                                                             |
+    and measurable software testing should complement a structured
+    and documented software development and change management                — J₁         |        7 4 Ea
+    process and should be part of each software version release.                             A   \
+    Industry is encouraged to monitor the evolution, implementation,
+
+
+
+    AUTOMATED DRIVING SYSTEMS 2.0: A VISION FOR SAFETY                                   5
+
+    SECTION 1: VOLUNTARY GUIDANCE    :
+
+
+2. Operational Design Domain
+    Entities are encouraged to define and document the Operational The ODD would include the following information at a minimum to
+    Design Domain (ODD) for each ADS available on their vehicle(s) as define each ADS’s capability limits/boundaries:
+    tested or deployed for use on public roadways, as well as document • Roadway types (interstate, local, etc.) on which the
+    the process and procedure for assessment, testing, and validation ADS is intended to operate safely;
+    of ADS functionality with the prescribed ODD. The ODD should
+    describe the specific conditions under which a given ADS or feature • Geographic area (city, mountain, desert, etc.);
+    is intended to function. The ODD is the definition of where (such as • Speed range;
+    what roadway types and speeds) and when (under what conditions,
+    such as day/night, weather limits, etc.) an ADS is designed to operate. • Environmental conditions in which the ADS will
+        operate (weather, daytime/nighttime, etc.); and
+
+
+                                              An ADS should be able to operate safely within the ODD for which
+      V4     /                      \\ \    N • Other domain constraints.
+                                              it is designed. In situations where the ADS is outside of its defined
+                                              ODD or in which conditions dynamically change to fall outside
+          /                              N    of the ADS’s ODD, the vehicle should transition to a minimal
+                                    .         risk condition.¹⁰ For a Level 3 ADS, transitioning to a minimal risk
+          ci              k:                  condition could entail transitioning control to a receptive, fallback-
+                           i        >         ready user.¹¹ In cases the ADS does not have indications that the
+           |              4
+                      BE
+      /  y            3    1             2,   user is receptive and fallback-ready, the system should continue to
+                                =             mitigate manageable risks, which may include slowing the vehicle
+                      |                       down or bringing the vehicle to a safe stop. To support the safe
+    =           sy                            introduction of ADSs on public roadways and to speed deployment,
+                                hil           the ODD concept provides the flexibility for entities to initially limit
+           |     |                       A    the complexity of broader driving challenges in a confined ODD.
+           |
+
+
+
+
+
+
+
+
+
+
+
+
+    6                           AUTOMATED DRIVING SYSTEMS 2.0: A VISION FOR SAFETY
+
+3. Object and Event Detection and Response
+    Object and Event Detection and Response (OEDR)¹² refers to the the ability of an ADS to operate in the traffic conditions that it will
+    detection by the driver or ADS of any circumstance that is relevant regularly encounter, including keeping the vehicle in a lane, obeying
+    to the immediate driving task, as well as the implementation of the traffic laws, following reasonable road etiquette, and responding to
+    appropriate driver or system response to such circumstance. For other vehicles or hazards.¹³ While research conducted by California
+    the purposes of this Guidance, an ADS is responsible for performing PATH¹⁴ provided a set of minimum behavioral competencies for
+    OEDR while it is engaged and operating in its defined ODD. ADSs,¹⁵ the full complement of behavioral competencies a particular
+    Entities are encouraged to have a documented process for ADS would be expected to demonstrate and routinely perform
+    assessment, testing, and validation of their ADS’s OEDR capabilities. will depend upon the individual ADS, its ODD, and the designated
+    When operating within its ODD, an ADS’s OEDR functions are fallback (minimal risk condition) method. Entities are encouraged to
+    expected to be able to detect and respond to other vehicles (in and consider all known behavioral competencies in the design, test, and
+    out of its travel path), pedestrians, bicyclists, animals, and objects that validation of their ADSs.
+    could affect safe operation of the vehicle. Crash Avoidance Capability – Hazards
+    An ADS’s OEDR should also include the ability to address a wide variety Entities are encouraged to have a documented process for
+    of foreseeable encounters, including emergency vehicles, temporary assessment, testing, and validation of their crash avoidance
+    work zones, and other unusual conditions (e.g., police manually capabilities and design choices. Based on the ODD, an ADS should
+    directing traffic or other first responders or construction workers be able to address applicable pre-crash scenarios¹⁶ that relate to
+    controlling traffic) that may impact the safe operation of an ADS. control loss; crossing-path crashes; lane change/merge; head-on
+        and opposite-direction travel; and rear-end, road departure, and
+    Normal Driving low-speed situations such as backing and parking maneuvers.¹⁷
+    Entities are encouraged to have a documented process for the Depending on the ODD, an ADS may be expected to handle many
+    assessment, testing, and validation of a variety of behavioral of the pre-crash scenarios that NHTSA has identified previously.¹⁸
+    competencies for their ADSs. Behavioral competency refers to
+
+
+
+    The Federal Government wants to ensure it does not
+    impede progress with unnecessary or unintended
+    barriers to innovation. Safety remains the number one
+    priority for U.S. DOT and is the specific focus of NHTSA.
+
+
+
+
+
+    AUTOMATED DRIVING SYSTEMS 2.0: A VISION FOR SAFETY    7
+
+    SECTION 1: VOLUNTARY GUIDANCE
+
+
+4. Fallback (Minimal Risk Condition)
+    Entities are encouraged to have a documented process for Fallback actions are encouraged to be administered in a manner
+    transitioning to a minimal risk condition when a problem is that will facilitate safe operation of the vehicle and minimize
+    encountered or the ADS cannot operate safely. ADSs operating erratic driving behavior. Such fallback actions should also consider
+    on the road should be capable of detecting that the ADS has minimizing the effects of errors in human driver recognition and
+    malfunctioned, is operating in a degraded state, or is operating decision-making during and after transition to manual control.
+    outside of the ODD. Furthermore, ADSs should be able to notify the In cases of higher automation in which a human driver may not
+    human driver of such events in a way that enables the driver to regain be available, the ADS must be able to fallback into a minimal risk
+    proper control of the vehicle or allows the ADS to return to a minimal condition without the need for driver intervention.
+    risk condition independently.
+    Fallback strategies should take into account that, despite laws and A minimal risk condition will vary according to the type and extent of
+    regulations to the contrary, human drivers may be inattentive, a given failure, but may include automatically bringing the vehicle to
+    under the influence of alcohol or other substances, drowsy, or a safe stop, preferably outside of an active lane of traffic. Entities are
+    otherwise impaired. encouraged to have a documented process for assessment, testing,
+        and validation of their fallback approaches.
+
+
+
+
+
+
+
+
+
+The purpose of this Voluntary Guidance is to help designers of ADSs analyze,
+identify, and resolve safety considerations prior to deployment using their own,
+industry, and other best practices. It outlines 12 safety elements, which the
+Agency believes represent the consensus across the industry, that are generally
+considered to be the most salient design aspects to consider and address when
+developing, testing, and deploying ADSs on public roadways.
+
+
+
+
+
+
+
+
+
+
+    8    AUTOMATED DRIVING SYSTEMS 2.0: A VISION FOR SAFETY
+
+5. Validation Methods
+    Given that the scope, technology, and capabilities vary widely Prior to on-road testing, entities are encouraged to consider the
+    for different automation functions, entities are encouraged to extent to which simulation and track testing may be necessary.
+    develop validation methods to appropriately mitigate the safety risks Testing may be performed by the entities themselves, but could also
+    associated with their ADS approach. Tests should demonstrate the be performed by an independent third party.
+    behavioral competencies an ADS would be expected to perform Entities should continue working with NHTSA and industry standards
+    during normal operation, the ADS’s performance during crash organizations (SAE, International Organization for Standards [ISO],
+    avoidance situations, and the performance of fallback strategies etc.) and others to develop and update tests that use innovative
+    relevant to the ADS’s ODD. methods as well as to develop performance criteria for test facilities
+    To demonstrate the expected performance of an ADS for that intend to conduct validation tests.
+    deployment on public roads, test approaches may include a
+    combination of simulation, test track, and on-road testing.
+
+
+
+
+
+
+
+
+
+
+    AUTOMATED DRIVING SYSTEMS 2.0: A VISION FOR SAFETY    9
+
+SECTION 1: VOLUNTARY GUIDANCE
+
+
+6.  Human Machine Interface
+    Understanding the interaction between the vehicle and the driver,            ADSs), motorcyclists, bicyclists, and pedestrians. HMI design should
+    commonly referred to as “human machine interface” (HMI), has                 also consider the need to communicate information regarding the
+    always played an important role in the automotive design process.            ADS’s state of operation relevant to the various interactions it may
+    New complexity is introduced to this interaction as ADSs take on             encounter and how this information should be communicated.
+    driving functions, in part because in some cases the vehicle must            In vehicles that are anticipated not to have driver controls, entities
+    be capable of accurately conveying information to the human driver           are encouraged to design their HMI to accommodate people with
+    regarding intentions and vehicle performance. This is particularly true      disabilities (e.g., through visual, auditory, and haptic displays).¹⁹
+    for ADSs in which human drivers may be requested to perform any
+    part of the driving task. For example, in a Level 3 vehicle, the driver      In vehicles where an ADS may be intended to operate without a
+    always must be receptive to a request by the system to take back             human driver or even any human occupant, the remote dispatcher
+    driving responsibilities. However, a driver’s ability to do so is limited    or central control authority, if such an entity exists, should be
+    by their capacity to stay alert to the driving task and thus capable of      able to know the status of the ADS at all times. Examples of these
+    quickly taking over control, while at the same time not performing           may include unoccupied SAE Automation Level 4 or 5 vehicles,
+    the actual driving task until prompted by the vehicle. Entities are          automated delivery vehicles, last-mile special purpose ground
+    encouraged to consider whether it is reasonable and appropriate to           drones, and automated maintenance vehicles.
+    incorporate driver engagement monitoring in cases where drivers              Given the ongoing research and rapidly evolving nature of this field,
+    could be involved in the driving task so as to assess driver awareness       entities are encouraged to consider and apply voluntary guidance,
+    and readiness to perform the full driving task.                              best practices, and design principles published by SAE International,
+    Entities are also encouraged to consider and document a process for          ISO, NHTSA, the American National Standards Institute (ANSI), the
+    the assessment, testing, and validation of the vehicle’s HMI design.         International Commission on Illumination (CIE), and other relevant
+    Considerations should be made for the human driver, operator,                organizations, based upon the level of automation and expected
+    occupant(s), and external actors with whom the ADS may have                  level of driver engagement.
+    interactions, including other vehicles (both traditional and those with
+
+         AT MINIMUM
+
+    An ADS should be capable of informing the human operator or occupant through various indicators that the ADS is:
+     • Functioning properly;                                                    • Experiencing a malfunction; and/or
+     • Currently engaged in ADS mode;                                           • Requesting control transition from the ADS to the
+     • Currently “unavailable” for use;                                         operator.
+
+
+
+
+10    AUTOMATED DRIVING SYSTEMS 2.0: A VISION FOR SAFETY
+
+7.   Vehicle Cybersecurity
+     Entities are encouraged to follow a robust product development             to report to the Auto-ISAC all discovered incidents, exploits, threats
+     process based on a systems engineering approach to minimize                and vulnerabilities from internal testing, consumer reporting,
+     risks to safety, including those due to cybersecurity threats and          or external security research as soon as possible, regardless of
+     vulnerabilities. This process should include a systematic and ongoing      membership. Entities are further encouraged to establish robust
+     safety risk assessment for each ADS, the overall vehicle design            cyber incident response plans and employ a systems engineering
+     into which it is being integrated, and when applicable, the broader        approach that considers vehicle cybersecurity in the design
+     transportation ecosystem.²⁰                                                process. Entities involved with ADSs should also consider adopting a
+     Entities are encouraged to design their ADSs following established         coordinated vulnerability reporting/disclosure policy.
+     best practices for cyber vehicle physical systems. Entities are
+     encouraged to consider and incorporate voluntary guidance, best      4
+     practices, and design principles published by National Institute of
+     Standards and Technology (NIST²¹), NHTSA, SAE International, the
+     Alliance of Automobile Manufacturers, the Association of Global
+     Automakers, the Automotive Information Sharing and Analysis Center
+     (Auto-ISAC),²² and other relevant organizations, as appropriate.                     3 2            [)
+     NHTSA encourages entities to document how they incorporated                 =    \
+     vehicle cybersecurity considerations into ADSs, including all actions,               ~g)               =
+     changes, design choices, analyses, and associated testing, and             vs                   0
+     ensure that data is traceable within a robust document version                              pe     Q
+     control environment.                                                             (yy~       ©)        n
+                                                                                          \           "
+     Industry sharing of information on vehicle cybersecurity facilitates                               Io
+     collaborative learning and helps prevent industry members from                                   &
+     experiencing the same cyber vulnerabilities. Entities are encouraged
+
+
+
+
+
+
+
+
+
+
+     AUTOMATED DRIVING SYSTEMS 2.0: A VISION FOR SAFETY                                                 11
+
+SECTION 1: VOLUNTARY GUIDANCE
+
+
+8.  Crashworthiness
+
+    Occupant Protection                                                        Compatibility
+    Given that a mix of vehicles with ADSs and those without will be           Unoccupied vehicles equipped with ADSs should provide geometric
+    operating on public roadways for an extended period of time,               and energy absorption crash compatibility with existing vehicles on
+    entities still need to consider the possible scenario of another vehicle   the road.²⁴ ADSs intended for product or service delivery or other
+    crashing into an ADS-equipped vehicle and how to best protect              unoccupied use scenarios should consider appropriate vehicle crash
+    vehicle occupants in that situation. Regardless of whether the ADS         compatibility given the potential for interactions with vulnerable road
+    is operating the vehicle or the vehicle is being driven by a human         users and other vehicle types.
+    driver, the occupant protection system should maintain its intended
+    performance level in the event of a crash.
+
+    Entities should consider incorporating information from the
+    advanced sensing technologies needed for ADS operation
+    into new occupant protection systems that provide enhanced
+    protection to occupants of all ages and sizes. In addition to the
+    seating configurations evaluated in current standards, entities are
+    encouraged to evaluate and consider additional countermeasures
+    that will protect all occupants in any alternative planned seating or
+    interior configurations during use.²³
+
+
+
+
+
+
+
+Entities are not required to submit a Voluntary Safety Self-Assessment,
+nor is there any mechanism to compel entities to do so. While these
+assessments are encouraged prior to testing and deployment, NHTSA does
+not require that entities provide disclosures nor are they required to delay
+testing or deployment. Assessments are not subject to Federal approval.
+
+
+
+
+
+
+
+
+12    AUTOMATED DRIVING SYSTEMS 2.0: A VISION FOR SAFETY
+
+9.  Post-Crash ADS Behavior
+    Entities engaging in testing or deployment should consider methods        Additionally, entities are encouraged to have documentation
+    of returning ADSs to a safe state immediately after being involved        available that facilitates the maintenance and repair of ADSs before
+    in a crash. Depending upon the severity of the crash, actions such        they can be put back in service. Such documentation would likely
+    as shutting off the fuel pump, removing motive power, moving the          identify the equipment and the processes necessary to ensure safe
+    vehicle to a safe position off the roadway (or safest place available),   operation of the ADSs after repairs.
+    disengaging electrical power, and other actions that would assist the
+    ADSs should be considered. If communications with an operations
+    center, collision notification center, or vehicle communications
+    technology exist, relevant data is encouraged to be communicated
+    and shared to help reduce the harm resulting from the crash.
+
+
+
+
+
+
+
+
+
+
+    AUTOMATED DRIVING SYSTEMS 2.0: A VISION FOR SAFETY                        13
+
+SECTION 1: VOLUNTARY GUIDANCE
+
+
+10. Data Recording
+Learning from crash data is a central component to the safety          issued by accredited standards developing organizations such as SAE
+potential of ADSs. For example, the analysis of a crash involving      International.²⁵ Likewise, these organizations are encouraged to be
+a single ADS could lead to safety developments and subsequent          actively engaged in the discussion and regularly update standards as
+prevention of that crash scenario in other ADSs. Paramount to          necessary and appropriate.
+this type of learning is proper crash reconstruction. Currently, no    To promote a continual learning environment, entities engaging in
+standard data elements exist for law enforcement, researchers,         testing or deployment should collect data associated with crashes
+and others to use in determining why an ADS-enabled vehicle            involving: (1) fatal or nonfatal personal injury or (2) damage that
+crashed. Therefore, entities engaging in testing or deployment         requires towing, including damage that prevents a motor vehicle
+are encouraged to establish a documented process for testing,          involved from being driven under its own power in its customary
+validating, and collecting necessary data related to the occurrence    manner or damage that prevents a motor vehicle involved from
+of malfunctions, degradations, or failures in a way that can be used   being driven without resulting in further damage or causing a hazard
+to establish the cause of any crash. Data should be collected for      to itself, other traffic elements, or the roadway.
+on-road testing and use, and entities are encouraged to adopt
+voluntary guidance, best practices, design principles, and standards   For crash reconstruction purposes (including during testing), it is
+                                                                       recommended that ADS data be stored, maintained, and readily
+                                                                       available for retrieval as is current practice, including applicable
+                                                                       privacy protections, for crash event data recorders.²⁶ Vehicles should
+                                                                       record, at a minimum, all available information relevant to the
+
+                                                                       These data should also contain the status of the ADS and whether
+D>      3               )                                              crash, so that the circumstances of the crash can be reconstructed.
+    |=     =|₋    °       =      p/                                    the ADS or the human driver was in control of the vehicle leading
+                  pe  I=  4  ~                                         up to, during, and immediately following a crash. Entities should
+    |             o     y                                              have the technical and legal capability to share with government
+                                                                       authorities the relevant recorded information as necessary for crash
+
+                                                                       public trust and acceptance, NHTSA will continue working with SAE
+                      = a                                              reconstruction purposes. Meanwhile, for consistency and to build
+
+    -                                                                  International to begin the work necessary to establish uniform data
+                                                                       elements for ADS crash reconstruction.
+
+                                                                       .
+
+
+
+
+
+
+
+
+14                AUTOMATED DRIVING SYSTEMS 2.0: A VISION FOR SAFETY
+
+11. Consumer Education and Training 12. Federal, State, and Local Laws
+    Education and training is imperative for increased safety during Entities are also encouraged to document how they intend to
+    the deployment of ADSs.²⁷ Therefore, entities are encouraged to account for all applicable Federal, State, and local laws in the
+    develop, document, and maintain employee, dealer, distributor, design of their vehicles and ADSs. Based on the operational
+    and consumer education and training programs to address the design domain(s), the development of ADSs should account for all
+    anticipated differences in the use and operation of ADSs from those governing traffic laws when operating in automated mode for the
+    of the conventional vehicles that the public owns and operates region of operation.³⁰ For testing purposes, an entity may rely on an
+    today.²⁸ Such programs should consider providing target users ADS test driver or other mechanism to manage compliance with the
+    the necessary level of understanding to utilize these technologies applicable laws.
+    properly, efficiently, and in the safest manner possible. In certain safety-critical situations (such as having to cross double
+    Entities, particularly those engaging in testing or deployment, should lines on the roadway to travel safely past a broken-down vehicle on
+    also ensure that their own staff, including their marketing and sales the road) human drivers may temporarily violate certain State motor
+    forces, understand the technology and can educate and train their vehicle driving laws. It is expected that ADSs have the capability of
+    dealers, distributors, and consumers.²⁹ handling such foreseeable events safely; entities are encouraged to
+    Consumer education programs are encouraged to cover topics have a documented process for independent assessment, testing,
+    such as ADSs’ functional intent, operational parameters, system and validation of such plausible scenarios.
+    capabilities and limitations, engagement/disengagement methods, Given that laws and regulations will inevitably change over time,
+    HMI, emergency fallback scenarios, operational design domain entities should consider developing processes to update and adapt
+    parameters (i.e., limitations), and mechanisms that could alter ADSs to address new or revised legal requirements.
+    ADS behavior while in service. They should also include explicit
+    information on what the ADS is capable and not capable of in
+    an effort to minimize potential risks from user system abuse or
+    misunderstanding. NHTSA encourages collaboration and communication
+    As part of their education and training programs, ADS dealers and between Federal, State, and local governments and
+    distributors should consider including an on-road or on-track the private sector as the technology evolves, and the
+    experience demonstrating ADS operations and HMI functions prior
+    to consumer release. Other innovative approaches (e.g., virtual reality Agency will continue to coordinate dialogue among all
+    or onboard vehicle systems) may also be considered, tested, and stakeholders. Collaboration is essential as our Nation
+    employed. These programs should be continually evaluated for their embraces the many technological developments
+    effectiveness and updated on a routine basis, incorporating feedback affecting our public roadways.
+    from dealers, customers, and other sources.
+
+    .
+
+
+
+    AUTOMATED DRIVING SYSTEMS 2.0: A VISION FOR SAFETY    15
+
+    SECTION 1: VOLUNTARY GUIDANCE
+
+
+VOLUNTARY SAFETY SELFASSESSMENT
+
+Entities engaged in ADS testing and deployment may demonstrate how For each safety element laid out by the Voluntary Guidance, entities are
+they address – via industry best practices, their own best practices, encouraged to include an acknowledgment within the Voluntary Safety
+or other appropriate methods – the safety elements contained in the Self-Assessment that indicates one of the following:
+Voluntary Guidance by publishing a Voluntary Safety Self-Assessment. • This safety element was considered during product development
+The Voluntary Safety Self-Assessment is intended to demonstrate to the efforts for the subject feature; or
+public (particularly States and consumers) that entities are: (1) considering
+the safety aspects of ADSs; (2) communicating and collaborating with • This safety element is not applicable to the subject product
+DOT; (3) encouraging the self-establishment of industry safety norms for development effort.
+ADSs; and (4) building public trust, acceptance, and confidence through NHTSA envisions that the Voluntary Safety Self-Assessments would
+transparent testing and deployment of ADSs. It also allows companies contain concise information on how entities are utilizing the Voluntary
+an opportunity to showcase their approach to safety, without needing to Guidance and/or their own processes to address applicable safety
+reveal proprietary intellectual property. elements identified in the Voluntary Guidance. The Voluntary Safety Self-
+To facilitate this process and as an example of the type of information Assessment should not serve as an exhaustive recount of every action
+an entity might provide as part of its Voluntary Safety Self-Assessment, the entity took to address a particular safety element.
+NHTSA has assembled an illustrative template for one of the safety Entities are not required to submit a Voluntary Safety Self-Assessment,
+elements within the Voluntary Guidance. This template is available on nor is there any mechanism to compel entities to do so. While these
+NHTSA’s website. However, the information submitted could vary beyond assessments are encouraged prior to testing and deployment, NHTSA
+the template when information is limited or unavailable (e.g., testing does not require that entities provide submissions nor are they required
+activities) or if the entity wishes to provide supplemental information. to delay testing or deployment. Assessments are not subject to Federal
+Entities should ensure that Voluntary Safety Self-Assessments do approval.
+not contain confidential business information (CBI), as it would be
+information available to the public. Entities will presumably wish to
+update these documents over time.
+
+
+
+
+
+
+
+
+
+
+    16    AUTOMATED DRIVING SYSTEMS 2.0: A VISION FOR SAFETY
+
+       es
+       WY
+  4    SX
+
+D3 AUTOMATED DRIVING SYSTEMS 2.0: A VISION FOR SAFETY 17
+
+THE FEDERAL AND STATE ROLES
+
+
+NHTSA strongly encourages States not to codify this Voluntary
+Guidance (that is, incorporate it into State statutes) as a legal
+requirement for any phases of development, testing, or
+deployment of ADSs. Allowing NHTSA alone to regulate the
+safety design and performance aspects of ADS technology will
+help avoid conflicting Federal and State laws and regulations
+that could impede deployment.
+
+
+
+
+
+
+
+
+
+
+18    AUTOMATED DRIVING SYSTEMS 2.0: A VISION FOR SAFETY
+
+SECTION 2: TECHNICAL
+         ASSISTANCE TO STATES
+   Best Practices for Legislatures Regarding Automated Driving Systems
+
+
+OVERVIEW
+
+The National Highway Traffic Safety Administration (NHTSA) of the Vehicle Administrators (AAMVA) under which the Autonomous Vehicle
+U.S. Department of Transportation (DOT) is prepared to assist with Best Practices Working Group was created. The working group was
+challenges that States face regarding the safe integration of SAE Level chartered to organize and share information related to the development,
+3 and above Automated Driving Systems (ADSs) on public roads. Given design, testing, use, and regulation of ADSs and other emerging vehicle
+that vehicles operating on public roads are subject to both Federal and technology. Based on the working group’s research, a report is currently
+State jurisdictions and States are beginning to regulate ADSs, NHTSA has being developed to assist jurisdictions in enhancing their current ADS
+developed this section. It is designed to clarify and delineate the Federal regulations or considering developing new legislation.³¹ The goal of
+and State roles in the regulation of ADSs and lay out a framework that the the report is to promote uniformity amongst jurisdictions and provide a
+States can use as they write their laws and regulations surrounding ADSs baseline safety approach to possible challenges to the regulation of ADS
+to ensure a consistent, unified national framework. sand testing the drivers who operate them.
+
+NHTSA is working to bring ADSs safely onto the Nation’s roadways in Coinciding with the development of AAMVA’s report, NHTSA has
+a way that encourages ADS entities (manufacturers, suppliers, transit continued to work with State stakeholders including the National
+operators, automated fleet operators, or any entity that offers services Conference of State Legislatures (NCSL) and the Governors Highway
+utilizing ADSs), consumer advocacy organizations, State legislatures, and Safety Association (GHSA) to identify emerging challenges in the
+other interested parties to work together in a shared environment. As the integration of ADSs and conventional motor vehicles.
+technology grows and the horizon of ADS changes rapidly, it is essential Based on public input and the Agency’s ongoing work with partners such
+for each of these entities and interested parties to exercise due diligence as NCSL, GHSA, and AAMVA, NHTSA offers these Best Practices and
+in staying ahead of activity in a proactive—rather than reactive—manner. specific legal components States should consider as we all work toward
+States have begun to propose and pass legislation concerning ADSs. the shared goal of advancing safe ADS integration. The objective is to
+Public comments to NHTSA suggest that these proposals present several assist States in developing ADS laws, if desired, and creating consistency
+disparate approaches for adding and amending State authority over in ADS regulation across the country.
+ADSs. Public comments and some State officials have asked NHTSA to While technology is evolving and new State legislative language is still
+provide guidance (and eventually regulations) that would support a more being drafted and reviewed, States can proactively evaluate current
+national approach to testing and deploying ADSs. laws and regulations so as not to unintentionally create barriers to ADS
+Further, in a prior collaborative effort between States and the Federal operation, such as a requirement that a driver have at least one hand on
+Government, NHTSA entered a 2-year cooperative agreement the steering wheel at all times.
+(beginning in September 2014) with the American Association of Motor
+
+
+
+    AUTOMATED DRIVING SYSTEMS 2.0: A VISION FOR SAFETY    19
+
+SECTION 2: TECHNICAL ASSISTANCE TO STATES
+
+
+NHTSA encourages States to review others’          FEDERAL AND STATE REGULATORY ROLES
+draft ADS policies and legislation and work
+toward consistency. The goal of State              In consideration of State activity regarding ADSs, as well as NHTSA’s activity at the Federal level, it is
+policies in this realm need not be uniformity      important to delineate Federal and State regulatory responsibility for motor vehicle operation.
+or identical laws and regulations across all       These general areas of responsibility should remain largely unchanged for ADSs. NHTSA is
+States. Rather, the aim should be sufficient       responsible for regulating motor vehicles and motor vehicle equipment, and States are responsible
+consistency of laws and policies to promote        for regulating the human driver and most other aspects of motor vehicle operation.
+innovation and the swift, widespread, safe
+integration of ADSs.                               Further DOT involvement includes safety, evaluation, planning, and maintenance of the Nation’s
+                                                   infrastructure through FHWA as well as regulation of the safe operation of interstate motor carriers
+States are encouraged to maintain a good           and commercial vehicle drivers, along with registration and insurance requirements through the
+state of infrastructure design, operation, and     Federal Motor Carrier Safety Administration (FMCSA).
+maintenance that supports ADS deployment
+and to adhere to the Manual on Uniform             DOT strongly encourages States to allow DOT alone to regulate the safety design and performance
+Traffic Control Devices (MUTCD), the existing      aspects of ADS technology. If a State does pursue ADS performance-related regulations, that State
+national standard for traffic control devices as   should consult with NHTSA.
+required by law. For example, items that may
+be considered a low priority now because
+of the presence of a human driver may                NHTSA’S RESPONSIBILITIES                             STATES’ RESPONSIBILITIES
+be considered a higher priority as vehicle
+systems begin to rely more on machine               • Setting Federal Motor Vehicle Safety             •  Licensing human drivers and registering
+vision and other techniques to detect where          Standards (FMVSSs) for new motor                     motor vehicles in their jurisdictions
+they are in a given lane. In addition, States        vehicles and motor vehicle equipment
+are urged to continue to work with the               (with which manufacturers must certify            •  Enacting and enforcing traffic laws and
+Federal Highway Administration (FHWA) and            compliance before they sell their                    regulations
+the American Association of State Highway            vehicles)³³                                       •  Conducting safety inspections, where States
+and Transportation Officials (AASHTO)³²
+to support uniformity and consensus in              • Enforcing compliance with FMVSSs                    choose to do so
+infrastructure standards setting. This will         • Investigating and managing the recall and        •  Regulating motor vehicle insurance and
+support the safe operation of ADSs and               remedy of noncompliances and safety-                 liability
+ensure the safety of human drivers, who will         related motor vehicle defects nationwide
+continue to operate vehicles on the roads for
+years to come.                                      • Communicating with and educating the
+                                                     public about motor vehicle safety issues
+
+
+
+
+
+20    AUTOMATED DRIVING SYSTEMS 2.0: A VISION FOR SAFETY
+
+BEST PRACTICES FOR LEGISLATURES                                                         -»                               x
+As States act to ensure the safety of road users in their jurisdictions,
+NHTSA continually monitors and reviews language to stay informed                                         Ci              on
+on State legislation. In reviewing draft State legislation, the Agency                                                   ==
+has identified common components and has highlighted significant
+elements regarding ADSs that States should consider including in                            iL.                          [                                 [
+legislation. As such, NHTSA recommends the following safety-related                                               =      =     \
+best practices when crafting legislation for ADSs:
+ •   Provide a “technology-neutral” environment.                                                    45     ga =|     IY     |      \                        |
+     States should not place unnecessary burdens on competition and                     4                      a     |  4                                  =
+                                                                                        /
+     innovation by limiting ADS testing or deployment to motor vehicle             ail] et                              aE
+     manufacturers only. For example, no data suggests that experience                      |   il
+     in vehicle manufacturing is an indicator of the ability to safely test or          jr
+     deploy vehicle technology. All entities that meet Federal and State           7                 a = ri    =        1
+     law prerequisites for testing or deployment should have the ability to         _       |   =2
+     operate in the State.
+ •   Provide licensing and registration procedures.                                     officials, other road users, and ADS passengers will be improved
+     States are responsible for driver licensing and vehicle registration               with greater understanding of the technology, capabilities, and
+     procedures. To support these efforts, NHTSA recommends defining                    functioning environment. States should develop procedures for
+     “motor vehicle” under ADS laws to include any vehicle operating on                 entities to report crashes and other roadway incidents involving ADSs
+     the roads and highways of the State; licensing ADS entities and test               to law enforcement and first responders.
+     operators for ADSs; and registering all vehicles equipped with ADSs            •   Review traffic laws and regulations that may serve as barriers to
+     and establishing proof of financial responsibility requirements in the             operation of ADSs.
+     form of surety bonds or self-insurance. These efforts provide States               States should review their vehicle codes, applicable traffic laws,
+     with the same information as that collected for conventional motor                 and similar items to determine if there are unnecessary regulatory
+     vehicles and improve State recordkeeping for ADS operation.                        barriers that would prevent the testing and deployment of ADSs on
+•    Provide reporting and communications methods for Public Safety                     public roads. For example, some States require a human operator to
+     Officials.                                                                         have one hand on the steering wheel at all times – a law that would
+     States can take steps to monitor safe ADS operation through                        pose a barrier to Level 3 through Level 5 ADSs.
+     reporting and communications mechanisms so that entities can
+     coordinate with public safety agencies. The safety of public safety
+
+
+
+
+     AUTOMATED DRIVING SYSTEMS 2.0: A VISION FOR SAFETY                                                              21
+
+SECTION 2: TECHNICAL ASSISTANCE TO STATES
+
+
+BEST PRACTICES FOR STATE HIGHWAY SAFETY OFFICIALS
+
+States have a general responsibility to reduce traffic crashes and the           b. Consider creating a jurisdictional ADS technology committee
+resulting deaths, injuries, and property damage for all road users in their           that is launched by the designated lead agency and includes
+jurisdictions. States use this authority to establish and maintain highway            representatives from the governor’s office, the motor vehicle
+safety programs addressing: driver education and testing; licensing;                  administration, the State department of transportation, the State
+pedestrian safety; law enforcement; vehicle registration and inspection;              law enforcement agency, the State Highway Safety Office, State
+traffic control; highway design and maintenance; crash prevention,                    office of information technology, State insurance regulator, the
+investigation, and recordkeeping; and emergency services. This includes               State office(s) representing the aging and disabled communities,
+any legal components States may wish to consider upon drafting                        toll authorities, trucking and bus authorities, and transit authorities.
+legislation on ADSs.                                                             c. To encourage open communication, the designated lead agency
+The following sections describe a framework for States looking for                    may choose to inform the State automated safety technology
+assistance in developing procedures and conditions for ADSs’ introduction             committee of the requests from entities to test in their State and
+onto public roadways. NHTSA and AAMVA’s collaborative partnership                     the status of the designated agency’s response to companies.
+on a Model State Policy is the foundation of the following discussion;           d. In an effort to implement a framework for policies and regulations,
+however, it has been upgraded to incorporate additional concerns of                   the designated lead agency could take steps to use or establish
+State stakeholders, the clarification of roles, and an emphasis on the                statutory authority. This preparation would involve examination of
+States’ consideration of the information—rather than a directive for action.          laws and regulations in order to address unnecessary barriers to
+NHTSA does not expect that States will necessarily need to create any                 ADS operation on public roadways.
+new processes or requirements in order to support ADS activities. Instead,       e. Consider developing an internal process to include an application
+the references below are intended as guidance for those States that may               for entities to test in their State.
+be looking to incorporate ADSs into existing processes or requirements or
+States who are considering such processes or requirements.                       f.   Consider establishing an internal process for issuing test ADS
+                                                                                      vehicle permits.
+1.  Administrative: States may want to consider new oversight activities      2. Application for Entities to Test ADSs on Public Roadways:
+    on an administrative level to support States’ roles and activities as they   For those States with an existing application process for test vehicles,
+    relate to ADSs. NHTSA does not expect that States will need to create        the following are considerations for applications involving testing of
+    any particular new entity in order to support ADS activities, but States     an ADS on public roadways. It is recommended that the application
+    may decide to create some of these entities if the State determines          for testing remain at the State level; however, if a State chooses to
+    that they will be useful. The references below are intended as               request applications at a local level, these considerations would carry
+    examples of those that may be appropriate for participation.                 to those jurisdictions.
+    a. Consider identifying a lead agency responsible for deliberation of
+    any ADS testing.
+
+
+
+
+
+22    AUTOMATED DRIVING SYSTEMS 2.0: A VISION FOR SAFETY
+
+a. States could request that an entity submit an application to the      3.  Permission for Entities to Test ADSs on Public Roadways:
+ designated lead agency in each State in which it plans to test ADSs.        For States that grant permission for testing of vehicles, the following
+ A process should be considered for application submission in                are considerations for granting permission for ADS testing on public
+ those situations in which multiple entities are involved in the testing     roadways. It is recommended that permission to test remain at the
+ of an ADS.                                                                  State level; however, State and local governments should coordinate.
+b. States could request the following information from entities to           If a State chooses to request applications at a local level, these
+ ensure accurate recordkeeping:                                              considerations would carry to those jurisdictions.
+ • Name, corporate physical and mailing addresses, in-State                  a. For greater public safety, it is recommended that a State’s lead
+  physical and mailing addresses (if applicable), and the program             agency involve law enforcement agencies before responding to
+  administrator/director’s name and contact information;                      the application for testing from the entity.
+ • Identification of each ADS that will be used on public roadways           b. It would be appropriate to suspend permission to test if the entity
+  by VIN, vehicle type, or other unique identifiers such as the year,         fails to comply with the State insurance or driver requirements.
+  make, and model; and
+ • Identification of each test operator, the operator’s driver license
+  number, and the State or country in which the operator is
+  licensed.
+c. Inclusion of the entity’s safety and compliance plan for the ADS
+ could provide increased safety assurance to the State.
+d. Inclusion of evidence of the entity’s ability to satisfy a judgment
+ or judgments for damages for personal injury, death, or property
+ damage caused by an ADS in the form of an instrument of
+ insurance, a surety bond, or proof of self-insurance could provide
+ increased safety assurance to the State.³⁴
+e. Inclusion of a summary of the training provided to the
+ employees, contractors, or other users designated by the entity
+ as test operators of the ADS could provide increased safety
+ assurance to the State.
+
+
+
+
+
+
+
+
+
+
+  AUTOMATED DRIVING SYSTEMS 2.0: A VISION FOR SAFETY                          23
+
+SECTION 2: TECHNICAL ASSISTANCE TO STATES
+
+
+
+    c. It would be appropriate for the lead agency to request additional         a. Consider identification of an ADS on the title and registration. This
+     information or require an entity to modify its application before            could apply to all ADSs or only those capable of operating without
+     granting approval.                                                           a human driver.
+    d. If a State requires an application, it should consider notification to    b. Consider requiring notification of ADS upgrades if the vehicle has
+     the entity indicating permission to test that ADS in the State. A State      been significantly upgraded post-sale. Applicable State forms could
+     may choose to request that entity’s test vehicles carry a copy of            be adjusted to reflect the upgrade.
+     proof of permission to test that ADS in those vehicles.
+         6. Working With Public Safety Officials: General considerations as
+4. Specific Considerations for ADS Test Drivers and Operations:                  public safety officials begin to understand vehicles and needs.
+    Considerations for States providing access for test-ADSs as they are         a. States could consider training public safety officials in conjunction
+    operated under designated circumstances and with entity-based                 with ADS deployments in their jurisdictions to improve
+    operators.                                                                    understanding of ADS operation and potential interactions.
+    a. If a State is concerned about the training of an ADS test driver, the     b. Coordination among States would be beneficial for developing
+     State could request a summary of the training provided to the test           policies on human operator behaviors, as to monitor behavior
+     driver.                                                                      changes—if any—in the presence of ADSs when the vehicle is in
+    b. For test vehicles, the test driver should follow all traffic rules and     control.
+     report crashes as appropriate for the State.
+    c. States regulate human drivers. Licensed drivers are necessary to      7.  Liability and Insurance: Initial considerations for State relegation of
+     perform the driving functions for motor vehicles equipped with              liability during an incident and insurance of the driver, entity, and/
+     automated safety technologies that are less than fully automated            or ADS. These considerations may take time and broad discussion
+     (SAE Levels 3 and lower). A licensed driver has responsibility to           of incident scenarios, understanding of technology, and knowledge
+     operate the vehicle, monitor the operation, or be immediately               of how the ADSs are being used (personal use, rental, ride share,
+     available to perform the driving task when requested or the lower           corporate, etc.). Additionally, determination of the operator of an ADS,
+     level automated system disengages.                                          in a given circumstance, may not necessarily determine liability for
+                                                                                 crashes involving the ADS.
+    d. Fully automated vehicles are driven entirely by the vehicle itself        a. Begin to consider how to allocate liability among ADS owners,
+     and require no licensed human driver (SAE levels 4 and 5), at least          operators, passengers, manufacturers, and other entities when a
+     in certain environments or under certain conditions.³⁵ The entire            crash occurs.
+     driving operation (under specified conditions) is performed by a
+     motor vehicle automated system from origin to destination.                  b. For insurance purposes, determine who (owner, operator,
+                                                                                  passenger, manufacturer, other entity, etc.) must carry motor
+5.  Considerations for Registration and Titling: Specific considerations          vehicle insurance.
+    regarding identification and records for ADS deployed for consumer           c. States could begin to consider rules and laws allocating tort
+    use and operation.                                                            liability.
+
+
+
+24    AUTOMATED DRIVING SYSTEMS 2.0: A VISION FOR SAFETY
+
+CONCLUSION
+
+Public trust and confidence in the evolution of ADSs has the potential to advance or inhibit the
+testing and deployment of ADSs on public roadways. NHTSA is committed to supporting the safety
+of these emerging and evolutionary technological advancements, which have the potential to
+significantly improve roadway safety. The Voluntary Guidance, highlighting the 12 priority safety
+elements, and its associated Voluntary Safety Self-Assessment offer public reassurance that safety
+remains NHTSA’s top priority. The States’ Best Practices section reinforces NHTSA’s willingness to
+assist States with the challenges they face regarding ADSs now and in the pivotal years ahead.
+
+This document will be updated periodically to reflect advances in technology, increased presence
+of ADSs on public roadways, and any regulatory action or statutory changes that could occur
+at both the Federal and State levels. In the meantime, the information provided herein serves
+to aid industry as it moves forward with testing and deploying ADSs and States with drafting
+legislation and developing plans and policies regarding ADSs. NHTSA encourages collaboration
+and communication between Federal, State, and local governments and the private sector as the
+technology evolves, and the Agency will continue to coordinate dialogue among all stakeholders.
+Collaboration is essential as our Nation embraces the many technological developments affecting
+our public roadways. Together, we can use lessons learned to make any necessary course
+corrections, to prevent or mitigate unintended consequences or safety risks, and to positively
+transform American mobility safely and efficiently.
+
+
+
+
+
+
+    RESOURCES
+
+    A central repository of associated references to this and other
+                NHTSA ADS resources will be maintained at
+    www.nhtsa.gov/technology-innovation/automated-vehicles.
+
+This includes an informational resource to support manufacturers and other
+entities interested in requesting regulatory action from NHTSA.
+
+
+
+
+    AUTOMATED DRIVING SYSTEMS 2.0: A VISION FOR SAFETY    25
+
+ENDNOTES
+
+1   NHTSA acknowledges that Privacy and Ethical Considerations are also important           and Definitions for Terms Related to Driving Automation Systems for On-Road
+    elements for entities to deliberate. See www.nhtsa.gov/AVforIndustry for                Motor Vehicles (J3016:Sept2016).
+    NHTSA’s approach on each.                                                          11   “Fallback ready user” means the user of a vehicle equipped with an engaged
+2   NHTSA completed the Paperwork Reduction Act (PRA) process and received                  ADS feature who is able to operate the vehicle and is receptive to ADS-issued
+    clearance from the Office of Management and Budget (OMB) on the Federal                 requests to intervene and to evident dynamic driving task (DDT) performance-
+    Automated Vehicles Policy Voluntary Guidance’s information collection through           relevant system failures in the vehicle compelling him or her to perform the DDT
+    August 31, 2018, 81 FR 65709.  However, pursuant to PRA, NHTSA is again                 fallback. See SAE International J3016, International Taxonomy and Definitions
+    seeking public comment on an updated Information Collection Request (ICR)               for Terms Related to Driving Automation Systems for On-Road Motor Vehicles
+    that covers the information included in Automated Driving Systems: A Vision for         (J3016:Sept2016).
+    Safety.  The ICR identified in this document will not be effective until the ICR   12   See Automated Vehicle Research for Enhanced Safety: Final Report.
+    process is completed.                                                                   Collision Avoidance Metrics Partnership, Automated Vehicle Research
+3   SAE International J3016, International Taxonomy and Definitions for Terms               Consortium. June 2016. DTNH22-050H-01277. The report includes detailed
+    Related to Driving Automation Systems for On-Road Motor Vehicles (J3016:Sept            functional descriptions for on-road driving automation levels and identifies
+    2016).                                                                                  potential objective test methods that could be used as a framework for
+4   See, e.g., 49 U.S.C. §§ 30102(a)(8), 30116, 30120.                                      evaluating emerging and future driving automation features. Available at
+5   Parts of this Voluntary Guidance could be applied to any form of ADS.                   www.noticeandcomment.com/Automated-Vehicle-Research-for-Enhanced-
+                                                                                            Safety-Final-Report-fn-459371.aspx.
+6   The National Traffic and Motor Vehicle Safety Act, as amended (“Safety Act”), 49   13   See Nowakowski, C., et al., Development of California Regulations to Govern
+    U.S.C. 30101 et seq., provides the basis and framework for NHTSA’s enforcement          the Testing and Operation of Automated Driving Systems, California PATH
+    authority over motor vehicle and motor vehicle equipment defects and non-               Program, University of California, Berkeley, Nov. 14, 2014, pg. 10. Available at
+    compliances with Federal Motor Vehicle Safety Standards (FMVSS).                        http://docs.trb.org/prp/15-2269.pdf.
+7   Under ISO 26262 (Road Vehicles: Functional Safety), functional safety refers to    14   California Partners for Advanced Transit and Highways (PATH) is a
+    the absence of unreasonable safety risks in cases of electrical and electronic          multidisciplinary research and development program of the University of
+    failures.                                                                               California, Berkeley, with staff, faculty, and students from universities worldwide
+8   For example, the U.S. Department of Defense standard practice on system                 and cooperative projects with private industry, State and local agencies, and
+    safety, MIL-STD-882E. 11 May 2012. Available at www.system-safety.org/                  nonprofit institutions. See www.path.berkeley.edu.
+    Documents/MIL-STD-882E.pdf.                                                        15   Id., pgs. 10-11. California PATH’s work described minimum behavioral
+9   See Van Eikema Hommes, Q.D. (2016, June). Assessment of Safety Standards                competencies for automated vehicles as “necessary, but by no means sufficient,
+    for Automotive Electronic Control Systems. (Report No. Dot HS 812 285).                 capabilities for public operation.” Id. The document’s full peer review is available
+    Washington, DC: National Highway Traffic Safety Administration. Available at            at www.nspe.org/sites/default/files/resources/pdfs/Peer-Review-Report-
+    ntl.bts.gov/lib/59000/59300/59359/812285_ElectronicsReliabilityReport.pdf.              IntgratedV2.pdf.
+10  “Minimal risk condition” means low-risk operating condition that an automated      16   See Rau, P., Yanagisawa, M., and Najm, W. G., Target Crash Population of
+    driving system automatically resorts to either when a system fails or when              Automated Vehicles, available at www-esv.nhtsa.dot.gov/Proceedings/24/files/
+    the human driver fails to respond appropriately to a request to take over the           Session 21 Written.pdf.
+    dynamic driving task. See SAE International J3016, International Taxonomy
+
+
+
+
+26    AUTOMATED DRIVING SYSTEMS 2.0: A VISION FOR SAFETY
+
+17   See Najm, W. G., Smith, J. D., and Yanagisawa, M., “Pre-Crash Scenario Typology        27   Not applicable to ADS testing.
+     for Crash Avoidance Research,” DOT HS 810 767, April 2007. Available at                28   The training and education programs recommended here are intended to
+     www.nhtsa.gov/gy-Final_PDF_Version_5-2-07.pdf.                                              complement and augment driver training and education programs run by States
+18   Available at http://ntl.bts.gov/lib/55000/55400/55443/                                      that retain the primary responsibility for training, testing, and licensing human
+     AVBenefitFrameworkFinalReport082615_Cover1.pdf.                                             drivers.
+19   Entities are encouraged to seek technical and engineering advice from members          29   Such training and education programs for employees, dealers, distributors, and
+     of the disabled community and otherwise engage with that community to                       consumers may be administered by an entity other than the direct employer,
+     develop designs informed by its needs and experiences.                                      manufacturer, or other applicable entity.
+20   Entities should insist that their suppliers build into their equipment robust          30   Traffic laws vary from State to State (and even city to city); ADSs should be able
+     cybersecurity features. Entities should also address cybersecurity, but they                to follow all laws that apply to the applicable operational design domain. This
+     should not wait to receive equipment from a supplier before doing so.                       includes speed limits, traffic control devices, one-way streets, access restrictions
+21   www.nist.gov/cyberframework.                                                                (crosswalks, bike lanes), U-turns, right-on-red situations, metering ramps, and
+22   An Information Sharing and Analysis Center (ISAC) is a trusted, sector specific             other traffic circumstances and situations.
+     entity that can provide a 24-hour-per-day 7-day-per-week secure operating              31   Future updates to AAMVA’s guide may integrate commercial vehicle ADS
+     capability that establishes the coordination, information sharing, and                      operational aspects brought forth by the Commercial Vehicle Safety Alliance
+     intelligence requirements for dealing with cybersecurity incidents, threats, and            (CVSA).
+     vulnerabilities. See McCarthy, C., Harnett, K., Carter, A., and Hatipoglu, C. (2014,   32   AASHTO is an international leader in setting technical standards for all phases of
+     October). Assessment of the information sharing and analysis center model                   highway system development. Standards are issued for design, construction of
+     (Report No. DOT HS 812 076). Washington, DC: National Highway Traffic Safety                highways and bridges, materials, and many other technical areas.
+     Administration.                                                                             See www.transportation.org/home/organization/.
+23   The tools to demonstrate such due care need not be limited to physical testing         33   NHTSA does not expressly regulate motor vehicle (or motor vehicle equipment)
+     but also could include virtual tests with vehicle and human body models.                    in-use performance after first sale. However, because the FMVSSs apply to the
+24   In 2003, as part of a voluntary agreement on crash compatibility, the Alliance of           vehicle or equipment when first manufactured and because taking a vehicle
+     Automobile Manufacturers agreed to a geometric compatibility commitment                     or piece of equipment out of compliance with an applicable standard can be a
+     which would provide for alignment of primary energy absorbing structures                    violation of the Safety Act, the influence of the FMVSSs extends throughout the
+     among vehicles. The European Union recently introduced a new frontal                        life of the vehicle even if NHTSA is not directly regulating it. At the same time,
+     crash test that also requires geometric load distribution similar to the Alliance           States have the authority to regulate a vehicle’s in-use performance (through
+     voluntary agreement.                                                                        safety inspection laws), but as the text here states, State regulations cannot
+25   The collection, recording, storage, auditing, and deconstruction of data                    conflict with applicable FMVSSs. Additionally, NHTSA continues to have broad
+     recorded by an entity must be in strict accordance with the entity’s consumer               enforcement authority to evaluate and address safety risks as they arise.
+     privacy and security agreements and notices, as well as any applicable legal           34   AAMVA experts recommended a minimum insurance requirement of $5 million;
+     requirements.                                                                               however, that is subject to State considerations.
+26   See 49 CFR Part 563, Event Data Recorders. Available at www.gpo.gov/fdsys/             35   Some vehicles may be capable of being entirely “driven” either by the vehicle
+     pkg/CFR-2016-title49-vol6/xml/CFR-2016-title49-vol6-part563.xml.                            itself or by a human driver. For such dual-capable vehicles, the States would
+                                                                                                 have jurisdiction to regulate (license, etc.) the human driver.
+
+
+
+     AUTOMATED DRIVING SYSTEMS 2.0: A VISION FOR SAFETY                                          27
+
+oA  pe  La = =i £0  = —  ==  €  3  ES  J A
+  —
+   ¢  =  =  ~  ~TT  NEL§   J  gor
+  3  ad
+  A
+  -  WAR  Thee
+  V4  a  |  a  <> TERRE
+  ==
+  <=  &7  a.  |  -
+  if  Se  0h
+  A  \  cE.  SEE  &
+  |)  188  a  co
+  N  |  TRE  We
+  Ean
+
+
+
+                       sss                   = 3  Sdie  i    gs bd
+
+
+
+  f
+   |  y
+   1.  \  yy  Be
+  a  aT
+  i  TOR a
+  &
+  NE  \».
+  wR  N&
+   Co  NR
+  ah —_—  |  Ee
+  ARN
+  \  Wi
+
+  dM  3
+
+ SL  3
+
+  a  “in  /  17
+
+  \
+  28  SHG  3  ~_  -
+
+
+
+DOT HS 812 442
+September 2017
+
+
+
+
+
+
+
+
+
+
+{ 2    CT]
+U.S. Department of Transportation
+
+    13069a-090617-v9a
+
