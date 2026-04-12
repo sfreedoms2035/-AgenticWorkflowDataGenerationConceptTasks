@@ -35,7 +35,7 @@ source venv/bin/activate
 ### 3. Install Dependencies
 Install the strictly required Python packages:
 ```bash
-pip install playwright pygetwindow
+pip install playwright pygetwindow json_repair
 ```
 
 ### 4. Install Playwright Browsers

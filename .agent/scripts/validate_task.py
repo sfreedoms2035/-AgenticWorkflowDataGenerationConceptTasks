@@ -389,13 +389,13 @@ def validate_task(filepath):
                 "ontological_scaffolding": ["Definitions", "Taxonomies", "Modular Composition"],
                 "abstraction_level": ["Description", "Indicators", "Assigned Abstraction Level"],
                 "axiomatic_base": ["Assumptions", "Formal Axiomatic", "Adversarial Edge"],
-                "relational_network": ["Intra-Concept", "Inter-Subconcept", "Formal"],
+                "relational_network": ["Intra-Concept", "Inter-Subconcept", "Formal", "Detailed Model", "Graph Definition"],
                 "inferential_framework": ["Deductions", "Reasoning Patterns"],
                 "methodological_apparatus": ["Methods", "Operational Constraints"],
                 "illustrative_corpus": ["Exemplars", "Non-Exemplars", "Boundary Cases"],
                 "goal_orientation": ["Problem Space", "Domain of Applicability", "Targeted Roles"],
                 "limitations_and_risks": ["Known Limitations", "Potential Risks", "Mitigation"],
-                "inter_concept_relationships": ["Description", "Types of Relationships", "Synergistic"],
+                "inter_concept_relationships": ["Description", "Types of Relationships", "Synergistic", "Pathways"],
             }
             for element_key, required_subs in ELEMENT_REQUIRED_SUBHEADINGS.items():
                 element_text = parsed_answer.get(element_key, "")
