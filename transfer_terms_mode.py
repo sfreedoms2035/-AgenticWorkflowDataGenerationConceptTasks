@@ -48,8 +48,8 @@ def patch_pipeline(target_dir):
     with open(pipeline_path, 'r', encoding='utf-8') as f:
         content = f.read()
     
-    # Skip if already patched
-    if 'INPUT_TERMS_DIR' in content:
+    # Skip if fully patched
+    if 'INPUT_TERMS_DIR' in content and 'def process_terms(' in content:
         print(f"  ⏭️ pipeline.py already has terms mode, skipping")
         return True
     
@@ -429,10 +429,13 @@ def process_terms(progress, start_turn=1, start_task=1, end_turn=8,
 
 '''
     # Insert before validate_only_mode
-    if 'def validate_only_mode():' in content:
-        content = content.replace(
-            'def validate_only_mode():',
-            terms_functions + '\ndef validate_only_mode():')
+    if 'def validate_only_mode' in content and 'def process_terms' not in content:
+        content = re.sub(
+            r'def validate_only_mode\(.*?\):',
+            lambda m: terms_functions + '\n' + m.group(0),
+            content,
+            count=1
+        )
         print(f"    + Added process_term() and process_terms() functions")
     
     # 14. Update CLI args in main()
