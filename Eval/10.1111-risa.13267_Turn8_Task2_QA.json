@@ -1,0 +1,50 @@
+{
+  "report_id": "QA-AUTO",
+  "evaluated_file": "10.1111-risa.13267_Turn8_Task2.json",
+  "overall_status": "PASS",
+  "locally_fixable": [],
+  "needs_regeneration": [],
+  "needs_partial_repair": [],
+  "metrics": {
+    "json_structure": {
+      "status": "PASS",
+      "violations": []
+    },
+    "conversation_completeness": {
+      "status": "PASS",
+      "violations": []
+    },
+    "richness_and_complexity": {
+      "status": "PASS",
+      "violations": []
+    },
+    "structured_answer_format": {
+      "status": "PASS",
+      "violations": []
+    },
+    "cot_structure": {
+      "status": "PASS",
+      "violations": []
+    },
+    "self_containment": {
+      "status": "PASS",
+      "violations": []
+    },
+    "followup_quality": {
+      "status": "PASS",
+      "violations": []
+    },
+    "thinking_quality": {
+      "status": "PASS",
+      "violations": []
+    }
+  },
+  "stats": {
+    "cot_chars": 11698,
+    "answer_chars": 40341,
+    "corpus_lines": 32,
+    "graph_elements": 28,
+    "axiomatic_lines": 34,
+    "turns": 6
+  }
+}

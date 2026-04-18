@@ -1,0 +1,84 @@
+{
+  "report_id": "QA-AUTO",
+  "evaluated_file": "Term001_Turn2_Task1.json",
+  "overall_status": "FAIL",
+  "locally_fixable": [],
+  "needs_regeneration": [
+    {
+      "category": "structured_answer_format",
+      "issue": "Axiomatic base too short: ~1 lines (min 15)"
+    },
+    {
+      "category": "structured_answer_format",
+      "issue": "Relational network too sparse: 0 graph elements found (min 8 vertices/edges/constraints)"
+    },
+    {
+      "category": "structured_answer_format",
+      "issue": "Illustrative corpus algorithmic narrative too short: ~1 lines (min 10)"
+    },
+    {
+      "category": "conversation_completeness",
+      "issue": "Turn 2: follow-up user prompt too short (46 chars, min 100)"
+    },
+    {
+      "category": "conversation_completeness",
+      "issue": "Turn 4: follow-up user prompt too short (26 chars, min 100)"
+    },
+    {
+      "category": "thinking_quality",
+      "issue": "Missing auxiliary thinking.txt file"
+    }
+  ],
+  "needs_partial_repair": [],
+  "metrics": {
+    "json_structure": {
+      "status": "PASS",
+      "violations": []
+    },
+    "conversation_completeness": {
+      "status": "FAIL",
+      "violations": [
+        "Turn 2: follow-up user prompt too short (46 chars, min 100)",
+        "Turn 4: follow-up user prompt too short (26 chars, min 100)"
+      ]
+    },
+    "richness_and_complexity": {
+      "status": "PASS",
+      "violations": []
+    },
+    "structured_answer_format": {
+      "status": "FAIL",
+      "violations": [
+        "Axiomatic base too short: ~1 lines (min 15)",
+        "Relational network too sparse: 0 graph elements found (min 8 vertices/edges/constraints)",
+        "Illustrative corpus algorithmic narrative too short: ~1 lines (min 10)"
+      ]
+    },
+    "cot_structure": {
+      "status": "PASS",
+      "violations": []
+    },
+    "self_containment": {
+      "status": "PASS",
+      "violations": []
+    },
+    "followup_quality": {
+      "status": "PASS",
+      "violations": []
+    },
+    "thinking_quality": {
+      "status": "FAIL",
+      "violations": [
+        "Missing auxiliary thinking.txt file"
+      ]
+    }
+  },
+  "stats": {
+    "cot_chars": 23474,
+    "answer_chars": 79017,
+    "corpus_lines": 1,
+    "graph_elements": 0,
+    "axiomatic_lines": 1,
+    "turns": 6
+  }
+}

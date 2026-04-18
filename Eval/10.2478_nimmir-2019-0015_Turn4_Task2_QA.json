@@ -1,0 +1,50 @@
+{
+  "report_id": "QA-AUTO",
+  "evaluated_file": "10.2478_nimmir-2019-0015_Turn4_Task2.json",
+  "overall_status": "PASS",
+  "locally_fixable": [],
+  "needs_regeneration": [],
+  "needs_partial_repair": [],
+  "metrics": {
+    "json_structure": {
+      "status": "PASS",
+      "violations": []
+    },
+    "conversation_completeness": {
+      "status": "PASS",
+      "violations": []
+    },
+    "richness_and_complexity": {
+      "status": "PASS",
+      "violations": []
+    },
+    "structured_answer_format": {
+      "status": "PASS",
+      "violations": []
+    },
+    "cot_structure": {
+      "status": "PASS",
+      "violations": []
+    },
+    "self_containment": {
+      "status": "PASS",
+      "violations": []
+    },
+    "followup_quality": {
+      "status": "PASS",
+      "violations": []
+    },
+    "thinking_quality": {
+      "status": "PASS",
+      "violations": []
+    }
+  },
+  "stats": {
+    "cot_chars": 12619,
+    "answer_chars": 33470,
+    "corpus_lines": 21,
+    "graph_elements": 43,
+    "axiomatic_lines": 23,
+    "turns": 6
+  }
+}

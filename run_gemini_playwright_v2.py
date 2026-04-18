@@ -12,6 +12,7 @@ Optimized for speed:
 
 Usage:
     python run_gemini_playwright_v2.py <pdf_path> <prompt_path>
+    python run_gemini_playwright_v2.py <terms_path> <prompt_path> --deep-think
 
 Exit codes:
     0 = Success (valid JSON extracted and saved)
@@ -139,6 +140,17 @@ def extract_semantic_blocks(text):
     blocks = {}
     if not text:
         return blocks
+    
+    # Pre-process: Normalize escaped newlines around !!!!! delimiters to real newlines.
+    # Deep Think / long-form outputs often produce: \\n!!!!!BLOCK_NAME!!!!!\\n
+    # where \\n is a literal two-character escape, not a real newline.
+    # We convert these to real newlines so the regex can match block boundaries.
+    # Multi-pass: handle \\\\n, \\n variations around delimiters
+    for _ in range(3):
+        text = re.sub(r'\\\\n\s*(!{3,})', r'\n\1', text)
+        text = re.sub(r'(!{3,}[A-Z0-9_-]+!{3,})\s*\\\\n', r'\1\n', text)
+        text = re.sub(r'\\n\s*(!{3,})', r'\n\1', text)
+        text = re.sub(r'(!{3,}[A-Z0-9_-]+!{3,})\s*\\n', r'\1\n', text)
         
     # Require delimiters to be at the start of a line (or string) to prevent mid-sentence severing
     pattern = r'(?:^|\n)[ \t]*\**[\\!]{3,}\s*([A-Z0-9\-_\\]+)\s*:?\s*[\\!]{3,}\**\s*(.*?)(?=(?:^|\n)[ \t]*\**[\\!]{3,}\s*[A-Z0-9\-_\\]+\s*:?\s*[\\!]{3,}|\s*$)'
@@ -512,7 +524,7 @@ def validate_and_save_json(llm_response, out_json_path, thinking_text=None):
 
 
 
-def run_gemini(pdf_path, prompt_file):
+def run_gemini(pdf_path, prompt_file, deep_think=False):
     with open(prompt_file, 'r', encoding='utf-8') as f:
         prompt_text = f.read()
 
@@ -520,36 +532,53 @@ def run_gemini(pdf_path, prompt_file):
     core_name = basename.replace("_Prompt.txt", "").replace("_RepairPrompt.txt", "")
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    out_json = os.path.join(script_dir, "Output", "json", f"{core_name}.json")
-    out_txt = os.path.join(script_dir, "Output", "thinking", f"{core_name}.txt")
+    
+    # Route outputs to _terms directories when in deep think (terms) mode
+    if deep_think:
+        out_json = os.path.join(script_dir, "Output", "json_terms", f"{core_name}.json")
+        out_txt = os.path.join(script_dir, "Output", "thinking_terms", f"{core_name}.txt")
+    else:
+        out_json = os.path.join(script_dir, "Output", "json", f"{core_name}.json")
+        out_txt = os.path.join(script_dir, "Output", "thinking", f"{core_name}.txt")
 
     abs_pdf_path = os.path.abspath(pdf_path)
 
-    # --- CACHED PDF EXTRACTION ---
-    cache_path = abs_pdf_path.replace(".pdf", ".txt")
-    if os.path.exists(cache_path):
-        log(f"Using cached text: {os.path.basename(cache_path)}")
-        with open(cache_path, 'r', encoding='utf-8') as f:
+    # --- CACHED TEXT EXTRACTION ---
+    # In terms mode (deep_think), the input is a .md file, not a PDF
+    abs_input_path = os.path.abspath(pdf_path)
+    
+    if abs_input_path.endswith('.md') or abs_input_path.endswith('.txt'):
+        # Terms mode: read the markdown file directly
+        log(f"Reading terms file: {os.path.basename(abs_input_path)}")
+        with open(abs_input_path, 'r', encoding='utf-8') as f:
             extracted_text = f.read()
+        log(f"Terms loaded: {len(extracted_text)} chars")
     else:
-        log(f"Extracting PDF via LiteParse: {os.path.basename(abs_pdf_path)}")
-        cmd = f'npx.cmd --yes @llamaindex/liteparse parse "{abs_pdf_path}" --format json -q'
-        try:
-            proc = subprocess.run(cmd, shell=True, capture_output=True, text=True, encoding='utf-8')
-            if proc.returncode != 0:
-                log(f"LiteParse Error: {proc.stderr}")
-                return False
+        # PDF mode: use cached extraction or LiteParse
+        cache_path = abs_input_path.replace(".pdf", ".txt")
+        if os.path.exists(cache_path):
+            log(f"Using cached text: {os.path.basename(cache_path)}")
+            with open(cache_path, 'r', encoding='utf-8') as f:
+                extracted_text = f.read()
+        else:
+            log(f"Extracting PDF via LiteParse: {os.path.basename(abs_input_path)}")
+            cmd = f'npx.cmd --yes @llamaindex/liteparse parse "{abs_input_path}" --format json -q'
+            try:
+                proc = subprocess.run(cmd, shell=True, capture_output=True, text=True, encoding='utf-8')
+                if proc.returncode != 0:
+                    log(f"LiteParse Error: {proc.stderr}")
+                    return False
 
-            pdf_data = json.loads(proc.stdout)
-            extracted_text = ""
-            for page in pdf_data.get('pages', []):
-                extracted_text += page.get('text', '') + "\n\n"
-            with open(cache_path, 'w', encoding='utf-8') as f:
-                f.write(extracted_text)
-            log(f"Extracted {len(extracted_text)} chars, cached to .txt")
-        except Exception as e:
-            log(f"PDF extraction failed: {e}")
-            return False
+                pdf_data = json.loads(proc.stdout)
+                extracted_text = ""
+                for page in pdf_data.get('pages', []):
+                    extracted_text += page.get('text', '') + "\n\n"
+                with open(cache_path, 'w', encoding='utf-8') as f:
+                    f.write(extracted_text)
+                log(f"Extracted {len(extracted_text)} chars, cached to .txt")
+            except Exception as e:
+                log(f"PDF extraction failed: {e}")
+                return False
 
     # --- BUILD MEGA-PROMPT ---
     code_block_directive = """
@@ -563,8 +592,14 @@ CRITICAL AVOIDANCE: DO NOT use "Canvas" mode, "Gems", or any interactive coding 
 ABSOLUTE PROHIBITION - NO XML/MARKUP: Do NOT write ANY XML, SysML, UML, HTML, or tag-based markup ANYWHERE in your response. No angle brackets for tags, no square brackets for tags, no packagedElement, no XMI. For the relational_network, use ONLY mathematical set-theoretic notation: V = {vertices}, E = {(source --> target, type)}, P = {port tuples}, C = {constraint expressions}. Any XML-like content crashes the pipeline.
 """
 
+    # Build source context header based on mode
+    if deep_think:
+        source_header = "# SOURCE TERM FOR ANALYSIS (Single AD/ADAS Automated Driving Term):"
+    else:
+        source_header = "# SOURCE DOCUMENT FOR ANALYSIS:"
+
     mega_prompt = f"""
-# SOURCE DOCUMENT FOR ANALYSIS:
+{source_header}
 {extracted_text}
 
 ---
@@ -574,8 +609,11 @@ ABSOLUTE PROHIBITION - NO XML/MARKUP: Do NOT write ANY XML, SysML, UML, HTML, or
 """
     log(f"Mega-prompt assembled: {len(mega_prompt)} chars")
     
-    # Save prompt to Output/prompts
-    out_prompt = os.path.join(script_dir, "Output", "prompts", f"{core_name}_prompt.txt")
+    # Save prompt to appropriate prompts directory
+    if deep_think:
+        out_prompt = os.path.join(script_dir, "Output", "prompts_terms", f"{core_name}_prompt.txt")
+    else:
+        out_prompt = os.path.join(script_dir, "Output", "prompts", f"{core_name}_prompt.txt")
     os.makedirs(os.path.dirname(out_prompt), exist_ok=True)
     with open(out_prompt, 'w', encoding='utf-8') as f:
         f.write(mega_prompt)
@@ -987,6 +1025,119 @@ ABSOLUTE PROHIBITION - NO XML/MARKUP: Do NOT write ANY XML, SysML, UML, HTML, or
         if not pro_selected:
             log("  ⚠️ Could not confirm Pro model selection — proceeding with current model")
 
+        # --- DEEP THINK ACTIVATION ---
+        if deep_think:
+            log("Activating Deep Think tool...")
+            deep_think_activated = False
+            
+            def activate_deep_think(max_retries=3):
+                """Click Tools → Deep Think in the Gemini UI.
+                
+                Deep Think is accessed via the 'Tools' button at the bottom of the
+                Gemini chat interface. Once the Tools menu opens, we click the
+                'Deep Think' option.
+                """
+                nonlocal selected_model_name, deep_think_activated
+                
+                for attempt in range(max_retries):
+                    try:
+                        # Step 1: Find and click the Tools button
+                        tools_clicked = page.evaluate("""() => {
+                            // Look for the Tools button by various selectors
+                            const selectors = [
+                                'button[aria-label*="Tools"]',
+                                'button[aria-label*="Werkzeuge"]',
+                                'button[aria-label*="tools"]',
+                                'button.tool-button',
+                                'button[mattooltip*="Tools"]',
+                                'button[mattooltip*="Werkzeuge"]',
+                            ];
+                            for (const sel of selectors) {
+                                const btn = document.querySelector(sel);
+                                if (btn && btn.offsetParent !== null) {
+                                    btn.click();
+                                    return true;
+                                }
+                            }
+                            
+                            // Fallback: Look for button with text 'Tools' or 'Werkzeuge'
+                            const allBtns = document.querySelectorAll('button');
+                            for (const btn of allBtns) {
+                                const text = (btn.innerText || '').trim().toLowerCase();
+                                if (text === 'tools' || text === 'werkzeuge' || text.includes('tool')) {
+                                    if (btn.offsetParent !== null) {
+                                        btn.click();
+                                        return true;
+                                    }
+                                }
+                            }
+                            return false;
+                        }""")
+                        
+                        if not tools_clicked:
+                            log(f"  ⚠️ Could not find Tools button (attempt {attempt+1})")
+                            page.wait_for_timeout(1000)
+                            continue
+                        
+                        page.wait_for_timeout(1500)  # Wait for menu animation
+                        
+                        # Step 2: Find and click Deep Think in the menu
+                        deep_think_clicked = page.evaluate("""() => {
+                            // Look in menu panels for Deep Think option
+                            const menuItems = document.querySelectorAll(
+                                '.mat-mdc-menu-item, button.bard-mode-list-button, ' +
+                                '.mat-mdc-menu-panel button, [role="menuitem"], ' +
+                                '.mdc-list-item, .mat-mdc-list-item'
+                            );
+                            
+                            for (const item of menuItems) {
+                                const text = (item.innerText || '').trim().toLowerCase();
+                                if (text.includes('deep think') || text.includes('deepthink') ||
+                                    text.includes('tiefes denken') || text.includes('deep-think')) {
+                                    item.click();
+                                    return text;
+                                }
+                            }
+                            
+                            // Broader search: any clickable element with Deep Think text
+                            const allElements = document.querySelectorAll('button, a, div[role="option"], span');
+                            for (const el of allElements) {
+                                const text = (el.innerText || '').trim().toLowerCase();
+                                if ((text.includes('deep think') || text.includes('deepthink')) && el.offsetParent !== null) {
+                                    el.click();
+                                    return text;
+                                }
+                            }
+                            return null;
+                        }""")
+                        
+                        if deep_think_clicked:
+                            log(f"  ✅ Deep Think activated: '{deep_think_clicked}' (attempt {attempt+1})")
+                            selected_model_name = "Gemini-3.1-pro-deep-think"
+                            deep_think_activated = True
+                            page.wait_for_timeout(1500)  # Wait for mode to take effect
+                            return True
+                        else:
+                            log(f"  ⚠️ Deep Think option not found in menu (attempt {attempt+1})")
+                            # Close the menu
+                            page.keyboard.press("Escape")
+                            page.wait_for_timeout(500)
+                    
+                    except Exception as e:
+                        log(f"  ⚠️ Deep Think activation error (attempt {attempt+1}): {e}")
+                        try:
+                            page.keyboard.press("Escape")
+                        except Exception:
+                            pass
+                        page.wait_for_timeout(1000)
+                
+                log("  ⚠️ Could not activate Deep Think after all retries — proceeding without it")
+                return False
+            
+            activate_deep_think()
+            if deep_think_activated:
+                selected_model_name = "Gemini-3.1-pro-deep-think"
+
         # Write selected model name to sidecar file so pipeline can read it
         try:
             model_sidecar = prompt_file + ".model"
@@ -1136,7 +1287,7 @@ ABSOLUTE PROHIBITION - NO XML/MARKUP: Do NOT write ANY XML, SysML, UML, HTML, or
             ]
 
             # Polling loop
-            max_wait = 750  # 12.5 minutes (raised from 420s)
+            max_wait = 1080 if deep_think else 750  # 18 min for Deep Think, 12.5 min otherwise
             start_wait = time.time()
             rep_check_interval = 5
             canvas_check_counter = 0
@@ -1226,7 +1377,8 @@ ABSOLUTE PROHIBITION - NO XML/MARKUP: Do NOT write ANY XML, SysML, UML, HTML, or
 
                 page.wait_for_timeout(rep_check_interval * 1000)
 
-            log("  ⚠️ Generation timed out after 750s. Returning TIMEOUT status.")
+            timeout_label = f"{max_wait}s"
+            log(f"  ⚠️ Generation timed out after {timeout_label}. Returning TIMEOUT status.")
             return 'TIMEOUT'
 
         gen_status = wait_for_completion()
@@ -1582,10 +1734,11 @@ ABSOLUTE PROHIBITION - NO XML/MARKUP: Do NOT write ANY XML, SysML, UML, HTML, or
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
-        print("Usage: python run_gemini_playwright_v2.py <pdf_path> <prompt_path>", file=sys.stderr)
+        print("Usage: python run_gemini_playwright_v2.py <pdf_path> <prompt_path> [--deep-think]", file=sys.stderr)
         sys.exit(1)
 
-    result = run_gemini(sys.argv[1], sys.argv[2])
+    deep_think_flag = "--deep-think" in sys.argv
+    result = run_gemini(sys.argv[1], sys.argv[2], deep_think=deep_think_flag)
 
     elapsed = time.time() - _WORKFLOW_START_TIME
     minutes = int(elapsed // 60)

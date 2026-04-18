@@ -576,12 +576,12 @@ def validate_task(filepath):
                      fixable_locally=False)
 
     # ── Gate 9: [Thinking]/[No Thinking] Prefix Check ────────────────────
-    # Turn 0 (user) must start with [Thinking]
+    # Turn 0 (user) must start with [Thinking] or [Deep Thinking]
     if len(convs) > 0 and convs[0].get("role") == "user":
         t0_content = convs[0].get("content", "")
-        if not t0_content.startswith("[Thinking]"):
+        if not (t0_content.startswith("[Thinking]") or t0_content.startswith("[Deep Thinking]")):
             fail("conversation_completeness",
-                 "Turn 0: user prompt must start with '[Thinking]'",
+                 "Turn 0: user prompt must start with '[Thinking]' or '[Deep Thinking]'",
                  fixable_locally=True)
     # Turns 2, 4 (user) must start with [No Thinking]
     for idx in [2, 4]:
@@ -700,12 +700,20 @@ def validate_task(filepath):
     try:
         json_dir = os.path.dirname(os.path.abspath(filepath))
         base_name = os.path.splitext(os.path.basename(filepath))[0]
-        # Navigate from .../Output/json/ to .../Output/thinking/
+        # Navigate from .../Output/json/ or .../Output/json_terms/ to thinking dir
         output_dir = os.path.dirname(json_dir)
-        thinking_dir = os.path.join(output_dir, "thinking")
-        thinking_path = os.path.join(thinking_dir, f"{base_name}.txt")
+        # Check both thinking/ and thinking_terms/ directories
+        thinking_candidates = [
+            os.path.join(output_dir, "thinking", f"{base_name}.txt"),
+            os.path.join(output_dir, "thinking_terms", f"{base_name}.txt"),
+        ]
+        thinking_path = None
+        for candidate in thinking_candidates:
+            if os.path.exists(candidate):
+                thinking_path = candidate
+                break
 
-        if os.path.exists(thinking_path):
+        if thinking_path:
             with open(thinking_path, 'r', encoding='utf-8', errors='replace') as tf:
                 raw_think = tf.read().strip()
                 

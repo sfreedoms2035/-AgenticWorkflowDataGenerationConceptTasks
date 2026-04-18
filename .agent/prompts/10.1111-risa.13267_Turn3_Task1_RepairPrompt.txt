@@ -4,8 +4,8 @@ Do NOT omit any blocks. Even if you are fixing a specific issue, the entire stru
 
 You MUST fix the following specific issues while maintaining ALL original constraints:
 
-- VOLUME FAILURE: CoT too short: 1420 chars (min 9000). Expand your content significantly to meet the character/line limits.
-- COT STRUCTURE: Missing 31 CoT sub-elements: 1.1, 1.2, 2.1, 2.2, 2.3.... You MUST explicitly include all 1.1 through 8.4 headings.
+- VOLUME FAILURE: CoT too short: 3859 chars (min 9000). Expand your content significantly to meet the character/line limits.
+- STRUCTURE: Axiomatic base too short: ~10 lines (min 15). Ensure all mandatory JSON keys and required arrays are populated.
 
 --- ORIGINAL TASK INSTRUCTIONS ---
 Review the original instructions below and ensure your new output satisfies BOTH the original rules AND fixes the failures listed above.
