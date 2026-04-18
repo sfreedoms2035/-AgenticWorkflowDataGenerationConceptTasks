@@ -1031,49 +1031,51 @@ ABSOLUTE PROHIBITION - NO XML/MARKUP: Do NOT write ANY XML, SysML, UML, HTML, or
             deep_think_activated = False
             
             def activate_deep_think(max_retries=3):
-                """Click Tools → Deep Think in the Gemini UI.
-                
-                Deep Think is accessed via the 'Tools' button at the bottom of the
-                Gemini chat interface. Once the Tools menu opens, we click the
-                'Deep Think' option.
-                """
+                """Click Tools → Deep Think in the Gemini UI using Playwright native locators."""
                 nonlocal selected_model_name, deep_think_activated
                 
                 for attempt in range(max_retries):
                     try:
                         # Step 1: Find and click the Tools button
-                        tools_clicked = page.evaluate("""() => {
-                            // Look for the Tools button by various selectors
-                            const selectors = [
-                                'button[aria-label*="Tools"]',
-                                'button[aria-label*="Werkzeuge"]',
-                                'button[aria-label*="tools"]',
-                                'button.tool-button',
-                                'button[mattooltip*="Tools"]',
-                                'button[mattooltip*="Werkzeuge"]',
-                            ];
-                            for (const sel of selectors) {
-                                const btn = document.querySelector(sel);
-                                if (btn && btn.offsetParent !== null) {
-                                    btn.click();
-                                    return true;
-                                }
-                            }
-                            
-                            // Fallback: Look for button with text 'Tools' or 'Werkzeuge'
-                            const allBtns = document.querySelectorAll('button');
-                            for (const btn of allBtns) {
-                                const text = (btn.innerText || '').trim().toLowerCase();
-                                if (text === 'tools' || text === 'werkzeuge' || text.includes('tool')) {
-                                    if (btn.offsetParent !== null) {
-                                        btn.click();
-                                        return true;
+                        tools_clicked = False
+                        
+                        # Native locators based on screenshot "+ | Tools"
+                        tools_selectors = [
+                            'button:has-text("Tools")',
+                            'button:has-text("Werkzeuge")',
+                            'button[aria-label*="Tools"]',
+                            'button[aria-label*="Werkzeuge"]',
+                            'button.tool-button',
+                            'button[data-test-id="tools-button"]'
+                        ]
+                        
+                        for sel in tools_selectors:
+                            try:
+                                btn = page.locator(sel).first
+                                if btn.is_visible(timeout=1000):
+                                    btn.click()
+                                    tools_clicked = True
+                                    log(f"  Clicked tools button via: {sel}")
+                                    break
+                            except Exception:
+                                continue
+                        
+                        if not tools_clicked:
+                            # Try JS fallback
+                            tools_clicked = page.evaluate("""() => {
+                                const allBtns = document.querySelectorAll('button');
+                                for (const btn of allBtns) {
+                                    const text = (btn.innerText || '').trim().toLowerCase();
+                                    if (text === 'tools' || text === 'werkzeuge' || text.includes('tool')) {
+                                        if (btn.offsetParent !== null) {
+                                            btn.click();
+                                            return true;
+                                        }
                                     }
                                 }
-                            }
-                            return false;
-                        }""")
-                        
+                                return false;
+                            }""")
+                            
                         if not tools_clicked:
                             log(f"  ⚠️ Could not find Tools button (attempt {attempt+1})")
                             page.wait_for_timeout(1000)
@@ -1082,44 +1084,51 @@ ABSOLUTE PROHIBITION - NO XML/MARKUP: Do NOT write ANY XML, SysML, UML, HTML, or
                         page.wait_for_timeout(1500)  # Wait for menu animation
                         
                         # Step 2: Find and click Deep Think in the menu
-                        deep_think_clicked = page.evaluate("""() => {
-                            // Look in menu panels for Deep Think option
-                            const menuItems = document.querySelectorAll(
-                                '.mat-mdc-menu-item, button.bard-mode-list-button, ' +
-                                '.mat-mdc-menu-panel button, [role="menuitem"], ' +
-                                '.mdc-list-item, .mat-mdc-list-item'
-                            );
-                            
-                            for (const item of menuItems) {
-                                const text = (item.innerText || '').trim().toLowerCase();
-                                if (text.includes('deep think') || text.includes('deepthink') ||
-                                    text.includes('tiefes denken') || text.includes('deep-think')) {
-                                    item.click();
-                                    return text;
-                                }
-                            }
-                            
-                            // Broader search: any clickable element with Deep Think text
-                            const allElements = document.querySelectorAll('button, a, div[role="option"], span');
-                            for (const el of allElements) {
-                                const text = (el.innerText || '').trim().toLowerCase();
-                                if ((text.includes('deep think') || text.includes('deepthink')) && el.offsetParent !== null) {
-                                    el.click();
-                                    return text;
-                                }
-                            }
-                            return null;
-                        }""")
+                        dt_clicked = False
                         
-                        if deep_think_clicked:
-                            log(f"  ✅ Deep Think activated: '{deep_think_clicked}' (attempt {attempt+1})")
+                        # Native locators for dropdown item
+                        dt_selectors = [
+                            'button:has-text("Deep Think")',
+                            '.mat-mdc-menu-item:has-text("Deep Think")',
+                            '[role="menuitem"]:has-text("Deep Think")',
+                            'div[role="option"]:has-text("Deep Think")',
+                            'span:has-text("Deep Think")'
+                        ]
+                        
+                        for sel in dt_selectors:
+                            try:
+                                option = page.locator(sel).last
+                                if option.is_visible(timeout=1000):
+                                    option.click()
+                                    dt_clicked = True
+                                    log(f"  ✅ Deep Think activated natively via: {sel}")
+                                    break
+                            except Exception:
+                                continue
+                        
+                        if not dt_clicked:
+                            # Try JS fallback
+                            dt_clicked = page.evaluate("""() => {
+                                const allElements = document.querySelectorAll('button, a, div[role="option"], span, [role="menuitem"]');
+                                for (const el of allElements) {
+                                    const text = (el.innerText || '').trim().toLowerCase();
+                                    if ((text.includes('deep think') || text.includes('deepthink')) && el.offsetParent !== null) {
+                                        el.click();
+                                        return true;
+                                    }
+                                }
+                                return false;
+                            }""")
+                            if dt_clicked:
+                                log(f"  ✅ Deep Think activated JS fallback")
+                        
+                        if dt_clicked:
                             selected_model_name = "Gemini-3.1-pro-deep-think"
                             deep_think_activated = True
                             page.wait_for_timeout(1500)  # Wait for mode to take effect
                             return True
                         else:
                             log(f"  ⚠️ Deep Think option not found in menu (attempt {attempt+1})")
-                            # Close the menu
                             page.keyboard.press("Escape")
                             page.wait_for_timeout(500)
                     
@@ -1133,7 +1142,7 @@ ABSOLUTE PROHIBITION - NO XML/MARKUP: Do NOT write ANY XML, SysML, UML, HTML, or
                 
                 log("  ⚠️ Could not activate Deep Think after all retries — proceeding without it")
                 return False
-            
+
             activate_deep_think()
             if deep_think_activated:
                 selected_model_name = "Gemini-3.1-pro-deep-think"

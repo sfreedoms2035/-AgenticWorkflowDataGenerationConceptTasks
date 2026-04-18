@@ -54,9 +54,22 @@ Because this pipeline interfaces directly with the Gemini Web Application, you m
 
 Place your source PDF documents in the `Input/` directory.
 
-**To start or resume the generation pipeline:**
+**To start or resume the standard PDF generation pipeline:**
 ```bash
 python pipeline.py --resume
+```
+
+**To use Terms Mode (generates tasks based on autonomous driving terms instead of PDFs):**
+Place your terms list in `Input_terms/Terms.md`.
+```bash
+python pipeline.py --terms-mode
+```
+
+**To enable the Deep Think model (e.g., Gemini 2.0 Flash Thinking / Gemini Thinking):**
+Can be combined with any mode to enable advanced reasoning capabilities.
+```bash
+python pipeline.py --deep-think
+python pipeline.py --terms-mode --deep-think
 ```
 
 **(Optional) Enable the live UI render preview to visually monitor progress:**

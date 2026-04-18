@@ -26,6 +26,8 @@ Usage:
 """
 import os
 import sys
+
+DEEP_THINK_MODE = False
 try:
     sys.stdout.reconfigure(encoding='utf-8')
 except AttributeError:
@@ -1062,7 +1064,7 @@ def process_task(pdf_path, doc_short, doc_name, turn, task_idx,
 
         # ── Step 2: Run Playwright (Gemini attempt) ──
         print(f"  🌐 Gemini attempt {gemini_attempts}/{MAX_GEMINI_ATTEMPTS}...")
-        pw_result = run_playwright(effective_input, p_path, deep_think=terms_mode)
+        pw_result = run_playwright(effective_input, p_path,)
         
         # SAFETY RETRY LOGIC
         if pw_result == "SAFETY_REJECTION":
@@ -1074,7 +1076,7 @@ def process_task(pdf_path, doc_short, doc_name, turn, task_idx,
             else:
                 p_text = build_generation_prompt(variation, turn, task_idx, doc_name, mode, is_soft_retry=True)
             with open(p_path, 'w', encoding='utf-8') as f: f.write(p_text)
-            pw_result = run_playwright(effective_input, p_path, deep_think=terms_mode)
+            pw_result = run_playwright(effective_input, p_path,)
 
         if not pw_result:
             print(f"  ❌ Playwright failed on attempt {gemini_attempts}")
@@ -1397,7 +1399,8 @@ def process_terms(progress, start_turn=1, start_task=1, end_turn=8,
     print(f"  📋 TERMS MODE: {len(all_terms)} terms found")
     print(f"  📁 Input: {terms_file}")
     print(f"  📁 Output: {OUTPUT_JSON_TERMS_DIR}")
-    print(f"  🧠 Model: Google Gemini 3.1 Pro Deep Think")
+    dt_label = " (Deep Think)" if DEEP_THINK_MODE else ""
+    print(f"  🧠 Model: Google Gemini 3.1 Pro{dt_label}")
     print(f"  📊 Structure: {len(all_terms)} terms × 16 tasks = {len(all_terms) * 16} total tasks")
     print(f"{'═'*70}")
 
@@ -1424,7 +1427,7 @@ def process_terms(progress, start_turn=1, start_task=1, end_turn=8,
             term_num, term_name, term_text, progress,
             start_turn=start_turn, start_task=start_task,
             end_turn=end_turn, test_setup=test_setup,
-            limit_tasks=limit_tasks, preview=preview)
+            limit_tasks=limit_tasks, preview=preview,)
 
         overall_pass += tp
         overall_fail += tf
@@ -1486,7 +1489,9 @@ def main():
     parser = argparse.ArgumentParser(description="AD/ADAS Coding Task Generation Pipeline")
     parser.add_argument("--pdf", help="Process a specific PDF file")
     parser.add_argument("--terms", action="store_true",
-                        help="Terms mode: use Input_terms/Terms.md instead of PDFs, activates Deep Think")
+                        help="Terms mode: use Input_terms/Terms.md instead of PDFs")
+    parser.add_argument("--deep-think", action="store_true",
+                        help="Force use of Deep Think model")
     parser.add_argument("--start-term", type=int, default=1,
                         help="Start from term N (1-indexed, terms mode only)")
     parser.add_argument("--limit-terms", type=int, default=0,
@@ -1502,6 +1507,8 @@ def main():
     parser.add_argument("--test-setup", action="store_true", help="One turn (turn 2), one task (task 1), one attempt (test mode)")
     parser.add_argument("--preview", action="store_true", help="When a task passes, render its 10 concept elements as HTML and open in browser.")
     args = parser.parse_args()
+    global DEEP_THINK_MODE
+    DEEP_THINK_MODE = getattr(args, "deep_think", False)
 
     if args.test_setup:
         args.turn = 2
@@ -1520,7 +1527,7 @@ def main():
         start_time = time.time()
 
         print(f"\n{'═'*70}")
-        print(f"  🚀 Pipeline Starting: TERMS MODE (Deep Think)")
+        print(f"  🚀 Pipeline Starting: TERMS MODE")
         print(f"  📂 Input:  {INPUT_TERMS_DIR}")
         print(f"  📂 Output: {OUTPUT_JSON_TERMS_DIR}")
         print(f"  🔄 Max Gemini attempts per task: {MAX_GEMINI_ATTEMPTS}")
