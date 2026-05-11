@@ -728,7 +728,7 @@ def build_repair_prompt(validation_report, original_prompt_text):
 
 
 # ── Execution Engine ─────────────────────────────────────────────────────────
-def run_playwright(pdf_path, prompt_file, deep_think=False):
+def run_playwright(pdf_path, prompt_file, deep_think=False, terms_mode=False):
     """Execute the Playwright script and return success boolean.
     
     Args:
@@ -739,6 +739,8 @@ def run_playwright(pdf_path, prompt_file, deep_think=False):
     cmd = f'python "{PLAYWRIGHT_SCRIPT}" "{pdf_path}" "{prompt_file}"'
     if deep_think:
         cmd += ' --deep-think'
+    if terms_mode:
+        cmd += f' --output-dir "{OUTPUT_JSON_TERMS_DIR}" --thinking-dir "{OUTPUT_THINK_TERMS_DIR}"'
     
     # Deep Think mode needs more time (15 min) since the model "thinks" longer
     timeout_seconds = 900 if not deep_think else 900
@@ -1064,7 +1066,7 @@ def process_task(pdf_path, doc_short, doc_name, turn, task_idx,
 
         # ── Step 2: Run Playwright (Gemini attempt) ──
         print(f"  🌐 Gemini attempt {gemini_attempts}/{MAX_GEMINI_ATTEMPTS}...")
-        pw_result = run_playwright(effective_input, p_path,)
+        pw_result = run_playwright(effective_input, p_path, terms_mode=terms_mode)
         
         # SAFETY RETRY LOGIC
         if pw_result == "SAFETY_REJECTION":
@@ -1076,7 +1078,7 @@ def process_task(pdf_path, doc_short, doc_name, turn, task_idx,
             else:
                 p_text = build_generation_prompt(variation, turn, task_idx, doc_name, mode, is_soft_retry=True)
             with open(p_path, 'w', encoding='utf-8') as f: f.write(p_text)
-            pw_result = run_playwright(effective_input, p_path,)
+            pw_result = run_playwright(effective_input, p_path, terms_mode=terms_mode)
 
         if not pw_result:
             print(f"  ❌ Playwright failed on attempt {gemini_attempts}")
